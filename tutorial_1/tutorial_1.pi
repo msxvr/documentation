@@ -1,0 +1,53 @@
+class Main implements GL_Program
+{
+	virtual Start()
+	{
+		SetBgColor(RGB(255,255,255));
+		SetBgImage("background1.jpg");		
+		
+		_spr = NewSprite("Mario");
+		_ani = _spr.AddAnimationWithSheet("walk", "supermario.png", 0, 2, 2, 27, 18, 28);
+		_spr.SetAnimation(_ani);
+		_spr.SetScale(6);
+		_spr.SetPos((GetResX()-_spr.GetWF())/2, (GetResY()-_spr.GetHF()-10));
+		
+		_pad = NewPad("pad");
+		_pad.SetPreset("CURSORS");
+		_pad.Start();
+		_controller = _spr.CreateController();
+		_controller.SetPad(_pad);
+		_controller.SetSpeed(4);
+		
+		_controller.SetUpdateCallback(this, "OnUpdate");
+	}
+	
+	function OnUpdate(_controller)
+	{
+		_spr = _controller.target;
+		if (_controller.dirX < 0) _spr.SetHFlip(false);
+		else if (_controller.dirX > 0) _spr.SetHFlip(true);
+		
+		if (_controller.dirX || _controller.dirY) 
+			_spr.SetAnimationSpeedFactor(1.0f);
+		else 
+		{
+			_spr.SetAnimationSpeedFactor(0.0f);
+			_spr.ResetAnimation();
+		}
+
+		_my = 180;
+		
+		_scale = _spr.GetScale();
+		_scale = 2 + 4*(_spr.GetY() - _my) / (GetResY() - _spr.GetHF() - _my);
+		_scale = clamp(_scale, 2, 6);
+		_spr.SetScale(_scale);
+		
+		_controller.SetSpeed(_scale, _scale/2);
+
+		_mx = 80*(6-_scale);
+		_mw = GetResX() - _spr.GetWF() - _mx*2;
+		_mh = GetResY() - _spr.GetHF() - _my;
+		_controller.EnableLimits(_mx, _my, _mw, _mh);
+	}
+}
+
