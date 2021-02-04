@@ -1,0 +1,59 @@
+//-----------------------------------------------------------------------------
+// Tutorial_2 Script
+// Revision: 1
+//
+// This VR-Script is an example of GL_Program for MSXVR
+// Author: Alberto De Hoyo Nebot
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+// See the GNU General Public License for more details:
+// http://www.gnu.org/licenses/
+//-----------------------------------------------------------------------------
+class Tutorial_2 implements GL_Program
+{
+	constants:
+		APPLE_SIZE = 15;
+		
+	properties:
+		head = null;
+		tail = null;
+		apple = null;
+	
+	virtual Init ()
+	{
+		head = NewObject("head", "snake_part");
+		head.SetPos(20, 20);
+		head.SetColor(RGB(0,255,0));
+		tail = head;
+		apple = NewSprite("apple");
+		apple.AddEmptyFrame(APPLE_SIZE, APPLE_SIZE);
+		apple.SetColor(RGB(255,255,0));
+		GenerateApple();
+	}
+	
+	function GenerateApple ()
+	{
+		apple.SetPos(Rand(0, GetResX()-APPLE_SIZE), Rand(0, GetResY()-APPLE_SIZE));
+	}
+	
+	virtual Move ()
+	{
+		_ret = IntersectRectWithRect (head.GetX()-head.SIZE/2, head.GetY()-head.SIZE/2, head.SIZE, head.SIZE, apple.GetX(), apple.GetY(), APPLE_SIZE, APPLE_SIZE);
+		if (_ret[0])
+		{
+			head.GotApple();
+			_tail = tail;
+			tail = NewObject("tail", "snake_part"); 
+			tail.head = _tail; 
+			tail.Start();
+			GenerateApple ();
+		}
+	}
+}

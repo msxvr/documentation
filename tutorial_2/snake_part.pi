@@ -1,0 +1,84 @@
+class Snake_Part implements GL_Sprite
+{
+	constants:
+		SIZE = 10;
+		
+	properties:
+		tail = null;
+		head = null;
+		dirX = 0;
+		dirY = 0;
+		speed = 1.0f;
+	
+	virtual Start()
+	{
+		AddEmptyFrame(SIZE, SIZE);
+	
+		if (head)
+		{
+			head.tail = this;
+			SetPos ((head.GetX() - head.dirX * SIZE), (head.GetY() - head.dirY * SIZE));
+		}
+		else
+		{
+			dirX = 1;
+			dirY = 0;
+		}
+	}
+	
+	function Move ()
+	{
+		if (head == null)
+		{
+			if (Input_IsKeyPressed (KEY_RIGHT))
+			{
+				dirX = 1;
+				dirY = 0;
+			}
+			else if (Input_IsKeyPressed (KEY_LEFT))
+			{
+				dirX = -1;
+				dirY = 0;
+			}
+			else if (Input_IsKeyPressed (KEY_UP))
+			{
+				dirY = -1;
+				dirX = 0;
+			}
+			else if (Input_IsKeyPressed (KEY_DOWN))
+			{
+				dirY = 1;
+				dirX = 0;
+			}
+			
+			IncPos (dirX * speed, dirY * speed);
+			
+			speed = clamp (speed + 0.01f * GetFTime(), 0, 5);
+		}
+		else
+		{
+			_toX = (head.GetX() - head.dirX * SIZE);
+			_toY = (head.GetY() - head.dirY * SIZE);
+			
+			x = GetX();
+			y = GetY();
+		
+			if (x < _toX) dirX = 1;
+			else if (x > _toX) dirX = -1;
+			else dirX = 0;
+			if (y < _toY) dirY = 1;
+			else if (y > _toY) dirY = -1;
+			else dirY = 0;
+			
+			x = IncreaseValueWithInertia (x, _toX, GetFTime() * 0.5f);
+			y = IncreaseValueWithInertia (y, _toY, GetFTime() * 0.5f);
+			
+			SetPos(x, y);
+		}
+	}
+	
+	function GotApple()
+	{
+		speed = 1.0f;
+	}
+}
