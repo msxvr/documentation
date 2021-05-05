@@ -36,9 +36,9 @@ MSXVR es una máquina compatible con la norma MSX y su intención es la de quere
 preservarla en el tiempo.
 
 El proyecto MSXVR pretende dar a conocer la informática clásica de los años
-80-90, ampliando su potencial pero conservando su esencia básica, la de disponer
-de todo un sistema computacional con el que comunicarte, aprender, desarrollar y
-jugar desde el primer momento en el que el sistema se inicia.
+80-90, ampliando su potencial, pero conservando su esencia básica, la de
+disponer de todo un sistema computacional con el que comunicarte, aprender,
+desarrollar y jugar desde el primer momento en el que el sistema se inicia.
 
 MSXVR anhela acercar a los nuevos usuarios y a los nostálgicos toda una nueva
 forma de entender la informática. Forma que se ha ido perdiendo con los años
@@ -190,6 +190,51 @@ En este caso, el texto son instrucciones VR-BASIC más o menos comunes. Si pulsa
 la tecla Mayúsculas (SHIFT) verá que salen otros textos: eso es porque esta
 tecla se puede combinar al mismo tiempo con las de función.
 
+## Texto
+
+Existen dos comandos muy importantes y posiblemente, sean de los más utilizados
+en este lenguaje. Estos comandos son PRINT e INPUT. Una pequeña descripción:
+
+**PRINT**: Visualiza datos numéricos o alfanuméricos en la pantalla en modo
+texto.
+
+**INPUT**: Acepta datos introducidos desde el teclado y los asigna a una
+variable.
+
+Estos comandos están ampliamente documentados en el apartado de “*Lista de
+comandos y funciones*”.
+
+Estos dos comandos se pueden usar de modo directo en VR-BASIC, es decir, que los
+podemos escribir directamente y pulsar ENTER para ejecutarlos:
+
+| PRINT “Esto es un ejemplo”                     |   | Muestra en pantalla el texto introducido entre comillas.        |
+| Esto es un ejemplo                             |   |                                                                 |
+| Ok                                             |   |                                                                 |
+|------------------------------------------------|---|-----------------------------------------------------------------|
+| INPUT A                                        |   | Introducimos un valor numérico para la variable A.              |
+| ? 4                                            |   |                                                                 |
+| Ok                                             |   |                                                                 |
+| PRINT A                                        |   | Muestra el contenido de la variable A.                          |
+| 4                                              |   |                                                                 |
+| Ok                                             |   |                                                                 |
+| INPUT A\$                                      |   | Introducimos un valor alfanumérico para la variable A\$.        |
+| ? Hola                                         |   |                                                                 |
+| Ok                                             |   |                                                                 |
+| PRINT A\$                                      |   | Muestra el contenido de la variable A\$.                        |
+| Hola                                           |   |                                                                 |
+| Ok                                             |   |                                                                 |
+| INPUT                                          |   | Si no indicamos una variable, obtendremos un error de sintaxis. |
+| ? Hola                                         |   |                                                                 |
+| Syntax error                                   |   |                                                                 |
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ## Constantes y Variables
 
 Conviene entender los conceptos de constante y variable. Una constante hace
@@ -234,11 +279,11 @@ PRINT A
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Atención: en VR-BASIC las variables pueden tener el nombre que queramos, pero
-internamente solo se hace caso a las dos primeras letras. Quiere decirse que si
+internamente solo se hace caso a las dos primeras letras. Quiere decirse que, si
 usamos la variable CONTADOR, es lo mismo que usar CO (el resto de letras se
 ignoran).
 
-Otra curiosidad es que se puede omitir el uso de LET. Por tanto podemos hacer:
+Otra curiosidad es que se puede omitir el uso de LET. Por tanto, podemos hacer:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A = 12
@@ -281,12 +326,12 @@ conseguir que este pueda hacer funcionar mejor los programas. A esta tarea se la
 denomina **Optimizar**.
 
 En VR-BASIC podemos indicar que queremos variables que almacenen números con
-formatos más pequeños y más rápidos de gestionar. Estos formatos son los números
-de precisión simple y los números enteros.
+formatos más pequeños y rápidos de gestionar. Estos formatos son los números de
+precisión simple y los números enteros.
 
-Los más rápidos son los números enteros: no permiten usar decimales pero son los
-más comunes a la hora de programar. Para indicar al VR-BASIC que queremos tener
-una variable de tipo entero y que use este tipo de número, aplicaremos el
+Los más rápidos son los números enteros: no permiten usar decimales, pero son
+los más comunes a la hora de programar. Para indicar al VR-BASIC que queremos
+tener una variable de tipo entero y que use este tipo de número, aplicaremos el
 símbolo (%). Al igual que hacemos con las cadenas de caracteres, podemos indicar
 que una variable es entera así:
 
@@ -355,7 +400,7 @@ Ahora veamos cómo convertir &B10101101 a decimal:
 |   |          | SUMA    | **173** |
 
 Con la misma lógica podemos convertir números de octal y hexadecimal a decimal.
-Eso sí, debe saber que en hexadecimal, los dígitos correspondientes a los
+Eso sí, debe saber que, en hexadecimal, los dígitos correspondientes a los
 valores decimales del 10 al 15 se escriben con las letras A, B, C, D, E, F
 respectivamente.
 
@@ -460,7 +505,7 @@ los más complejos.
 
 **ATN** - Devuelve el arco tangente. Valor entre –pi/2 y pi/2.
 
-**TAN -** Devuelve la tangente del número (medido en radianes).
+**TAN** - Devuelve la tangente del número (medido en radianes).
 
 **COS** - Devuelve el coseno de un ángulo (medido en radianes).
 
@@ -612,10 +657,10 @@ DELETE 10
 
 Es interesante conocer y saber utilizar toda esta forma de interactuar con los
 programas. Sin embargo, en VR-BASIC existe un editor de texto pensado para la
-programación y que se invoca desde el intérprete con la instrucción CALL EDIT o
-bien con la versión abreviada \_EDIT. Este editor facilita algunas cosas de las
-vistas anteriormente, además de que tiene resaltado de sintaxis para ver mejor
-el código, entre otras funcionalidades muy interesantes.
+programación y que se invoca desde el intérprete con la instrucción **CALL
+EDIT** o bien con la versión abreviada **\_EDIT**. Este editor facilita algunas
+cosas de las vistas anteriormente, además de que tiene resaltado de sintaxis
+para ver mejor el código, entre otras funcionalidades muy interesantes.
 
 #### Uso de etiquetas
 
@@ -700,6 +745,10 @@ esté antes o después de la línea en la que estamos.
 50 END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #### FOR / NEXT
 
 Permite definir, entre un FOR y un NEXT, una serie de instrucciones para que se
@@ -710,6 +759,10 @@ imprimiremos por pantalla los números del 1 al 10.
 10 FOR I = 1 TO 10
 20 PRINT I
 30 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #### GOSUB / RETURN
@@ -731,6 +784,10 @@ repite.
 120 RETURN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #### ON / GOTO
 
 Permite usar condiciones al mismo tiempo que la instrucción GOTO. O sea, según
@@ -746,6 +803,10 @@ el valor de una variable podemos decidir a dónde saltar. Veamos un ejemplo:
 70 END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Otro ejemplo:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -754,7 +815,7 @@ Otro ejemplo:
 30 PRINT "1.- PREGUNTAR NOMBRE"
 40 PRINT "2.- MOSTRAR NOMBRE"
 50 PRINT "3.- SALIR"
-60 INPUT "Opcion";OP
+60 INPUT "Opción";OP
 70 ON OP GOTO 80, 100, 120
 80 INPUT "Dime un nombre";N$
 90 GOTO 60
@@ -775,8 +836,12 @@ IF expresión_condicional THEN sentencias ELSE sentencias
 IF expresión_condicional GOTO <número> [ELSE <número>]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Las expresiones condicionales utilizan operadores condicionales, como se
-comentan en el apartado de la página 25.
+comentan en el apartado de la página 28.
 
 Las expresiones condicionales devuelven un valor VERDADERO o FALSO. A este tipo
 de valores se les denomina Booleanos. Numéricamente, el 0 correspondería a FALSO
@@ -793,18 +858,22 @@ Ejemplo:
 20 IF A < 18 THEN PRINT "Eres joven":END ELSE PRINT "Eres adulto"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Otro ejemplo:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-10 INPUT "Area del cuadrado o del triangulo (C o T) ";A$
+10 INPUT "Área del cuadrado o del triangulo (C o T) ";A$
 20 IF A$ = "C" GOTO 40 ELSE IF A$ = "T" GOTO 70 ELSE 10
 30 REM ---
 40 INPUT "Dime cuanto mide el lado";S
-50 PRINT "El area del cuadrado es: "; S*S
+50 PRINT "El área del cuadrado es: "; S*S
 60 END
 70 INPUT "Dime cuanto mide la altura";H
 80 INPUT "Dime cuanto mide la base";B
-90 PRINT "El area del triangulo es"; B*H/2
+90 PRINT "El área del triangulo es"; B*H/2
 100 END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -918,9 +987,520 @@ Ejemplo:
 230 END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## Algunos ejemplos en VR-BASIC
+
+Estos ejemplos servirán de ayuda para comprender todo lo descrito hasta ahora.
+Todos los ejemplos son en modo de texto. En el siguiente punto, trataremos el
+tema gráfico.
+
+## Tabla de multiplicar
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 CLS
+20 INPUT "Dime el multiplicador";M
+30 PRINT M;"X 1";" = ";1*M
+40 PRINT M;"X 2";" = ";2*M
+50 PRINT M;"X 3";" = ";3*M
+60 PRINT M;"X 4";" = ";4*M
+70 PRINT M;"X 5";" = ";5*M
+80 PRINT M;"X 6";" = ";6*M
+90 PRINT M;"X 7";" = ";7*M
+100 PRINT M;"X 8";" = ";8*M
+110 PRINT M;"X 9";" = ";9*M
+120 PRINT M;"X 10";" = ";10*M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+En este ejemplo, pedimos por teclado que se introduzca un número que usaremos
+como multiplicador y el multiplicando, serán los números comprendidos del 1 al
+10.
+
+Cada línea PRINT hace el cálculo y lo muestra formateado.
+
+## Tabla de multiplicar optimizada con un bucle
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 CLS
+20 INPUT "Dime el multiplicador";M
+30 FOR C=1 TO 10
+40 PRINT C;"X ";M;" = ";C*M
+50 NEXT C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hemos cambiado todas las líneas PRINT por una sola que se encuentra dentro de un
+bucle FOR / NEXT. De este modo, mientras se recorre el bucle del 1 al 10, se van
+pintando los resultados.
+
+## Adivina mi número
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 Y=INT(RND(1)*10)
+20 CLS
+30 PRINT "ADIVINA MI NUMERO"
+40 PRINT "-----------------":PRINT
+50 INPUT "DAME UN NUMERO (0-9)";X
+60 IF X < Y THEN PRINT:PRINT "DEBE SER MAYOR":FOR I=1 TO 300:NEXT I:GOTO 20
+65 IF X > Y THEN PRINT:PRINT "DEBE SER MENOR":FOR I=1 TO 300:NEXT I:GOTO 20
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 IF Y = X THEN PRINT:PRINT "ACERTASTE MI NUMERO!!"
+80 PRINT:PRINT "Mi numero era:";Y
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este sencillo programa, genera un número aleatorio del 1 al 10 y lo que hace es
+ir comparando el número introducido por teclado, variable X, con el generado de
+modo aleatorio, variable Y. Cuando son iguales, finaliza el programa. Observa
+que usamos la función INT para obtener el número entero sin decimales.
+
+## Jugando con bucles
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 CLS
+15 PRINT "*"
+20 FOR I=1 TO 9
+30 FOR J=1 TO I
+40 PRINT "*";
+50 NEXT J
+55 PRINT "*"
+60 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este ejemplo pinta una media pirámide hecha a base de asteriscos. El “;” (punto
+y coma) después del PRINT sirve para que se pinte el siguiente PRINT seguido,
+sin saltos de línea.
+
+## Jugando a tabular la salida de datos
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 CLS
+20 DIM ano$(12)
+30 FOR I=1 TO 12
+40 READ ano$(I)
+100 PRINT ano$(I);TAB(15);I
+110 NEXT I
+120 END
+130 DATA Enero,Febrero,Marzo,Abril,Mayo
+140 DATA Junio,Julio,Agosto,Septiembre
+150 DATA Octubre,Noviembre,Diciembre
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este otro ejemplo, muestra la lista de meses con sus nombres y el número de mes
+al que corresponde. Usamos la función TAB para formatear la salida del número de
+mes.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Textos que se mueven
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 CLS
+20 FOR X=1 TO 6
+30 LOCATE X,2
+40 PRINT"NOMBRE"
+50 FOR T=1 TO 100:NEXT T                                                      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 LOCATE X,2                                                                 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 IF X<6 THEN PRINT " "                                                    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 NEXT X
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 FOR X=30 TO 20 STEP -1                                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 LOCATE X,2                                                                 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 PRINT "APELLIDO"                                                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 FOR T=1 TO 100:NEXT T                                                      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 LOCATE X+7,2                                                              
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 IF X>20 THEN PRINT " "                                                    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 NEXT X
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+En este ejemplo, podremos observar cómo se mueven dos cadenas de texto. NOMBRE
+se desplaza hacia la derecha y APELLIDO se desplaza hacia la izquierda.
+Utilizamos el comando LOCATE para posicionar el texto en los ejes X,Y de la
+pantalla. En este caso para ambos textos, el eje Y es 2. Los FOR.. NEXT con la
+variable X son los que manejan el movimiento del eje X, y al usar LOCATE X,2 y
+LOCATE X+7 junto con los FOR.. NEXT X, provocamos el movimiento en dicho eje.
+Los IF THE ELSE, controlan el borrado del carácter que vamos arrastrando. En el
+caso de NOMBRE es la letra N y en APELLIDO en la O. Prueba a quitar dichos IF
+THEN ELSE y comprobarás para que se usan. Los FOR..NEXT con la variable T actúa
+como temporizador, es decir, el tiempo que tarda el desplazar el texto carácter
+a carácter. Si cambiamos su valor, 100 por otro menor, los textos se desplazarán
+más rápido y por supuesto, si ponemos un valor superior a 100, se desplazarán
+más lentos.
+
+## Atrapa el número
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 KEY OFF:SCREEN 0:WIDTH 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 CLS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 PRINT "ATRAPA EL NUMERO" TAB(30) "NUMERO ALEATORIO"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 I=INT(9*RND(-1*TIME))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 LOCATE 5,2:PRINT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 A=INT(9*RND(-1*TIME))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+65 LOCATE 35,2:PRINT A
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 LOCATE 5,6: PRINT "Pulsa la barra espaciadora para congelar un numero"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 K$=INKEY$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 IF K$=" " THEN 140
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 GOTO 60
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 IF I=A THEN LOCATE 10,9:PRINT "ERES UN GENIO!"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 IF I<>A THEN LOCATE 10,9:PRINT "HAS FALLADO"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+230 LOCATE 1,12:PRINT "QUIERES JUGAR DE NUEVO?(S/N)";
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+240 A$=INKEY$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+250 IF A$="S" OR A$="s" THEN GOTO 20 ELSE IF A$="N" OR A$="n" THEN END ELSE GOTO 240
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este programa hace uso de dos números aleatorios contenidos en dos variables; I,
+A. El número I se nos muestra bajo el texto ATRAPA ESTE NUMERO y bajo el texto
+NUMERO ALEATORIO vemos un número que va cambiando con rapidez del 1 al 9 de
+forma aleatoria, esa es la variable A.
+
+El programa espera la pulsación de la barra espaciadora para parar el número que
+se autogenera rápidamente y el objetivo es pararlo en el mismo número que nos
+muestra a la izquierda. Si fallamos o acertamos, el programa mostrará el texto
+de ERES UN GENIO o HAS FALLADO, según el caso. Podremos continuar la partida
+pulsando S/s o parar pulsando N/n. La clave de este código es que genera dos
+códigos aleatorios y los comparamos para ver si son iguales o no.
+
+## Slot machine
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 REM SLOT MACHINE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 KEY OFF:SCREEN 0,,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 DIM DADO(3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 M=100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 APUESTA=5:I=1:CO=0:DI=0:TR=0:PI=0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+55 DADO(0)=0:DADO(1)=0:DADO(2)=0:DADO(3)=0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 CLS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PRINT "SLOT MACHINE"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 DADO(I)=INT(4*RND(-1*TIME))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 IF DADO(I)=0 THEN DADO(I)=67
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 IF DADO(I)=1 THEN DADO(I)=68
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 IF DADO(I)=2 THEN DADO(I)=69
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 IF DADO(I)=3 THEN DADO(I)=70
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 LOCATE 5+I,2:PRINT CHR$(1)+CHR$(DADO(I))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 K$=INKEY$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 IF K$=" " THEN 180
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+180 IF DADO(I)=67 THEN CO=CO+1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+190 IF DADO(I)=68 THEN DI=DI+1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+200 IF DADO(I)=69 THEN TR=TR+1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+210 IF DADO(I)=70 THEN PI=PI+1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+215 IF I<3 THEN I=I+1:GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+220 IF CO>1 THEN APUESTA=APUESTA*CO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+230 IF DI>1 THEN APUESTA=APUESTA*DI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+240 IF TR>1 THEN APUESTA=APUESTA*TR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+250 IF PI>1 THEN APUESTA=APUESTA*PI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+260 IF APUESTA=5 THEN M=M-APUESTA:LOCATE 10,8:PRINT "HAS PERDIDO:";APUESTA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+270 IF APUESTA>5 THEN M=M+APUESTA:LOCATE 10,8:PRINT "HAS GANADO:";APUESTA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+280 LOCATE 10,10:PRINT "TU MONEDERO:";M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+290 LOCATE 1,12:PRINT "QUIERES JUGAR DE NUEVO?(S/N)";
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+300 A$=INKEY$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+310 IF A$="S" OR A$="s" THEN GOTO 50 ELSE IF A$="N" OR A$="n" THEN END ELSE GOTO 300
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ya comenzamos a ver código más complejo. El corazón de este programa está basado
+en el código anterior: Atrapa el número.
+
+En este caso generamos un número aleatorio del 0 a 3 y dependiendo del número le
+asignamos otro número que usaremos más tarde para mostrar su código ASCII. Esos
+códigos ASCII son los símbolos de la baraja de cartas francesa: corazones,
+diamantes, tréboles y picas. El programa contabiliza cuantas figuras iguales han
+aparecido en las tiradas, de modo que, si han salido al menos dos símbolos
+iguales, suma puntos, si no, los resta.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Moviendo un carácter con el teclado
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 X=10:Y=10:CLS:KEY OFF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 A$=INKEY$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 IF A$="S" THEN X=X-1:GOTO 70
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 IF A$="D" THEN X=X+1:GOTO 70
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 IF A$="E" THEN Y=Y-1:GOTO 90
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 IF A$="X" THEN Y=Y+1:GOTO 90
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 IF X<0 THEN X=0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 IF X>28 THEN X=28
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 IF Y<0 THEN Y=0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 IF Y>20 THEN Y=20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 LOCATE X,Y:PRINT " O "
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 GOTO 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este programa muestra esto “ O “ en la pantalla. Lo podemos mover pulsando las
+teclas:
+
+S: izquierda, D: derecha, E:arriba, X: abajo
+
+## Creando un menú de acciones
+
+10 REM SIMPLE MENU SYSTEM
+
+20 REM PRINT OUT LIST OF OPTIONS
+
+25 KEY OFF
+
+30 CLS
+
+35 PRINT "1. MOSTRAR UN MENSAJE"
+
+40 PRINT "2. ESCUCHAR NOTAS MUSICALES"
+
+50 PRINT "3. PINTAR UN CIRCULO"
+
+60 PRINT "4. EXIT"
+
+70 LOCATE 1,20
+
+80 PRINT "ELIGE UNA OPCION ";
+
+90 A\$=INKEY\$:IF A\$="" THEN 90 ELSE PRINT A\$
+
+100 OPT%=ASC(A\$)-48
+
+110 IF (OPT%\<1) OR (OPT%\>4) THEN BEEP:LOCATE 22,20:GOTO 90
+
+120 REM SELECT ACTION TO BE TAKEN
+
+130 ON OPT% GOSUB 500,600,700,800
+
+500 CLS:PRINT "HOLA. SOY UN MSXVR!"
+
+510 FOR I=1 TO 800:NEXT I
+
+520 RETURN 30
+
+600 REM ALGO DE MUSICA
+
+610 PLAY "CDEFG"
+
+620 FOR I=1 TO 800:NEXT I
+
+630 RETURN 30
+
+700 REM PINTAR UN CIRCULO
+
+710 SCREEN 2
+
+720 CIRCLE(128,92),70,1
+
+730 PAINT(128,92),1
+
+740 FOR I=1 TO 800:NEXT I
+
+750 SCREEN 1:RETURN 30
+
+800 CLS:END:REM FIN DEL PROGRAMA
+
+Un ejemplo sencillo de cómo crear un menú interactivo, de modo que, dependiendo
+de la opción que se elija, el programa salta a las líneas adecuadas para
+ejecutar esa parte de código. Todo se controla con GOSUB y RETURN. Este último
+para volver siempre al menú principal.
 
 ## Gráficos 
 
@@ -959,7 +1539,7 @@ través de un monitor o de una televisión.
 | MSXVR      | \--               | VDP9968  |
 
 \* En algunos modelos MSX podemos encontrar variantes del VDP, incluso de otros
-fabricantes, compatibles con el estándar pero con sutiles diferencias, como por
+fabricantes, compatibles con el estándar, pero con sutiles diferencias, como por
 ejemplo los TMS9929, TMS9129, T9737 y T6950 de (Toshiba).
 
 ### VRAM
@@ -1222,7 +1802,7 @@ otros dispositivos relacionados se conecten y comuniquen entre sí.
 ## Puertos de entrada y salida
 
 Los puertos de entrada y salida para los MSX se codifican en un número entero
-que va del 0 al 255. A continuación se muestra una tabla[^3] con los distintos
+que va del 0 al 255. A continuación, se muestra una tabla[^3] con los distintos
 dispositivos a los que se puede acceder según sea el número de puerto utilizado.
 Nótese que, en algunos casos, distintos fabricantes pueden llegar a usar el
 mismo puerto.
@@ -1407,7 +1987,7 @@ MSX-BASIC:
 
 ## Lista de comandos y funciones 
 
-A continuación se irán detallando los diferentes comandos y funciones
+A continuación, se irán detallando los diferentes comandos y funciones
 disponibles en VR‑BASIC. En todos ellos veremos:
 
 | NOMBRE     | La cadena de texto que hace referencia al comando que los invoca.                              |
@@ -2517,7 +3097,7 @@ CALL PCMPLAY(array [,duración], muestreo)
 
 ### Parámetros
 
-| Comienzo | Constantes de tipo entero;‑32768≤dirección≤65535.        |
+| Comienzo | Constantes de tipo entero; ‑32768≤dirección≤65535.       |
 |----------|----------------------------------------------------------|
 | Final    | Constantes de tipo entero;‑32768≤dirección≤65535.        |
 | Muestreo | Constantes de tipo entero;0≤muestreo≤3.                  |
@@ -3025,9 +3605,42 @@ d
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Para mostrar los caracteres gráficos extendidos:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PRINT CHR$ (1) ; CHR$ (67)
 ♥
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## International Codes
+
+Códigos de control en azul. Son ignorados por la instrucción en los modos
+gráficos.
+
+Los caracteres desde el 20h al 7Fh (morados) están codificados en 7-bit ASCII.
+
+Caracteres verdes son caracteres específicos de MSX occidental.
+
+El ultimo carácter (FFh) es el cursor.
+
+La tabla con caracteres naranjas, son. También son específicos para el MSX
+occidental y el MSX ruso. Las formas de estos caracteres se encuentran en los
+primeros 32 caracteres.
+
+![](media/7a86e9ba8c39781aa348f33f602108f9.png)
+
+International Fonts
+
+![](media/df827227035b2a0d589e75eba62bbc73.png)
 
 ## CINT
 
@@ -3117,6 +3730,118 @@ CIRCLE [STEP] (coordenadas de centro x, y),radio [,color] [,ángulo inicial] [,�
 30 CIRCLE (50, 50), 30,,,,4
 40 CIRCLE STEP (80,70), 30,,,,,25
 50 GOTO 50 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 CIRCLE(125,96),70
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 CIRCLE(100,30),30,1,,,1.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 CIRCLE(100,30),30,1,0,2*3.14,2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 CIRCLE(100,30),30,1,0,2*3.14,5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 GOTO 90
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 CIRCLE(125,96),50,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 PAINT(125,96),2,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PAINT(10,10),10,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 GOTO 50
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Este ejemplo dibuja figuras muy llamativas en pantalla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 SCREEN 5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 FOR I = 7 TO 0 STEP -1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 CIRCLE (120,100), I*10+5, I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 PAINT (120, 100), I, I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 J = (J+I) MOD 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 FOR I = 0 TO 7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 COLOR = (I, 0, J, 0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+180 J = (J+1) MOD 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+190 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+200 GOTO 150
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+asdasdasd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## CLEAR
@@ -4413,22 +5138,352 @@ DRAW comandos
 
 ### Parámetros
 
-| comandos            | **Cond.** Cadena de caracteres (constantes) encerradas entre comillas ("") o variables de cadena que tienen asignada una cadena de caracteres. Caracteres en mayúsculas o minúsculas. |                                                                                                                                                                                                                                                                                               |   |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| **Comando**         | **Condición**                                                                                                                                                                         | **Significado**                                                                                                                                                                                                                                                                               |   |
-| Sn (escala)         | 0≤n≤255                                                                                                                                                                               | Especifica el número de puntos correspondiente a una unidad cuando se dibuja una línea. Con n = 1, ¼ de punto. El valor inicial es S4.                                                                                                                                                        |   |
-| An (ángulo)         | 0≤n≤3                                                                                                                                                                                 | Gira el sistema de coordenadas un paso de 90º a partir de un eje de coordenadas estándar (0º). El valor inicial es A0.                                                                                                                                                                        |   |
-| Cn (color)          | 0≤n≤15                                                                                                                                                                                | Especifica un color para una línea dibujada mediante un código de color. El valor inicial es C15.                                                                                                                                                                                             |   |
-| Mx,y (movimiento)   | 0≤x≤255 0≤y≤191                                                                                                                                                                       | Traza una línea desde un punto actual hasta una posición absoluta (x,y).                                                                                                                                                                                                                      |   |
-| M±x,±y (movimiento) | 0≤x≤255 0≤y≤191                                                                                                                                                                       | Desplaza horizontalmente ±x y verticalmente ±y desde un punto actual. La unidad de x,y es el número de puntos especificado por el comando S.                                                                                                                                                  |   |
-| Un (arriba)         |                                                                                                                                                                                       | Dibuja una línea en dirección negativa del eje y, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión.                                         |   |
-| Dn (abajo)          |                                                                                                                                                                                       | Dibuja una línea en dirección positiva del eje y, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión.                                         |   |
-| Rn (derecha)        |                                                                                                                                                                                       | Dibuja una línea en dirección positiva del eje x, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión.                                         |   |
-| Ln (izquierda)      |                                                                                                                                                                                       | Dibuja una línea en dirección negativa del eje x, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión.                                         |   |
-| En                  |                                                                                                                                                                                       | Dibuja una línea en la dirección positiva del eje X y en la dirección negativa del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
-| Fn                  |                                                                                                                                                                                       | Dibuja una línea en la dirección positiva del eje X y en la dirección positiva del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
-| Gn                  |                                                                                                                                                                                       | Dibuja una línea en la dirección negativa del eje X y en la dirección positiva del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
-| Hn                  |                                                                                                                                                                                       | Dibuja una línea en la dirección negativa del eje X y en la dirección negativa del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| comandos            | **Cond.** Cadena de caracteres (constantes) encerradas entre comillas ("") o variables de cadena que tienen asignada una cadena de caracteres. Caracteres en mayúsculas o minúsculas. |                                                                                                                                                                                                                                                       |   |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| **Comando**         | **Condición**                                                                                                                                                                         | **Significado**                                                                                                                                                                                                                                       |   |
+| Sn (escala)         | 0≤n≤255                                                                                                                                                                               | Especifica el número de puntos correspondiente a una unidad cuando se dibuja una línea. Con n = 1, ¼ de punto. El valor inicial es S4.                                                                                                                |   |
+| An (ángulo)         | 0≤n≤3                                                                                                                                                                                 | Gira el sistema de coordenadas un paso de 90º a partir de un eje de coordenadas estándar (0º). El valor inicial es A0.                                                                                                                                |   |
+| Cn (color)          | 0≤n≤15                                                                                                                                                                                | Especifica un color para una línea dibujada mediante un código de color. El valor inicial es C15.                                                                                                                                                     |   |
+| Mx,y (movimiento)   | 0≤x≤255 0≤y≤191                                                                                                                                                                       | Traza una línea desde un punto actual hasta una posición absoluta (x,y).                                                                                                                                                                              |   |
+| M±x,±y (movimiento) | 0≤x≤255 0≤y≤191                                                                                                                                                                       | Desplaza horizontalmente ±x y verticalmente ±y desde un punto actual. La unidad de x,y es el número de puntos especificado por el comando S.                                                                                                          |   |
+| Un (arriba)         |                                                                                                                                                                                       | Dibuja una línea en dirección negativa del eje y, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| Dn (abajo)          |                                                                                                                                                                                       | Dibuja una línea en dirección positiva del eje y, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| Rn (derecha)        |                                                                                                                                                                                       | Dibuja una línea en dirección positiva del eje x, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| Ln (izquierda)      |                                                                                                                                                                                       | Dibuja una línea en dirección negativa del eje x, desde un punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| En |   | Dibuja una línea en la dirección positiva del eje X y en la dirección negativa del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+|----|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| Fn |   | Dibuja una línea en la dirección positiva del eje X y en la dirección positiva del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| Gn |   | Dibuja una línea en la dirección negativa del eje X y en la dirección positiva del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+| Hn |   | Dibuja una línea en la dirección negativa del eje X y en la dirección negativa del eje Y, desde el punto actual hasta otro punto situado a una distancia n. Esta unidad se multiplicará por la escala (comando S) para obtener el número de puntos a dibujar. El valor de n es 1 por omisión. |   |
+
+### Ejemplo 1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 OPEN "GRP:" AS #1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 DRAW "BM100,100"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PRINT#1,"HELP"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 DRAW "BM102,102"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 PRINT#1,"HELP"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 DRAW "BM100,120"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 PRINT#1, USING"###.######";ATN(1)*4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 GOTO 90
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 COLOR 1,15,15
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 OPEN "GRP:" AS #1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 FOR I=0 TO 15
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 COLOR I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 DRAW "BM+8,0"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PRINT#1,"COLOUR CODE";I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 GOTO 90
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5 REM $MACRO LENGUAJE GRAFICO$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 REM :A$ = PERFIL CASA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 A$ = "BM70,130U60BD60R60U60BL30BU40NF40NG40D2NF38NG38"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 REM:B$ = PUERTAS/VENTANAS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 B$ = "BM80,70R10D20L10U20BR30R10D20L10U20BM90,100R20D30BL20U30BM82,70D20BR2U20BR2D20BR2U20BM112,70D20BR2U20BR2D20BR2U20BM92,100D30BR2U30BR2D30BR2U30BR2D30BR2U30BR2D30BR2U30BR2D30"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+55 REM:C$ = CHIMENEA/HUMO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+58 C$ = "BM80,50U15R10D5BM90,30E10U10E10BD10R10D10L10U10DB10BR20U10F10U10BR10F5NE5D5"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 REM:D$ = PAJAROS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 D$ = "BM170,30F10E10BM190,40F10E10"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 REM:E$ = CARTEL.HITBIT 55
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 E$ = "BM170,120R60D50L60U50 BM180,140U10D5R5D5BR5U5BU2U1 BM195,140U10NL2NR2BR10D10U5R5D5L5BR10U5BU2U1 BM220,140U10NL2NR2 BM190,160R5U5L5U5R5BD10BR10R5U5L5U5R5"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 REM:F$ = CAMINO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 F$ = "BM90,140F10G10F10BM110,140F10G10F10"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 DRAW"XA$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 DRAW"XB$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 DRAW"XC$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+180 DRAW"XD$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+190 DRAW"XE$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+200 DRAW"XF$;"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+250 FOR I = 0 TO 5000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+260 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+270 A = RND(1)*15
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+280 B = RND(1)*15:C = RND(1)*15
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+290 COLOR A,B,C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+300 GOTO 300
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 REM ** COMANDOS GRAFICOS **
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 COLOR 15,1,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+15 '*** ALTA RESOLUCION -->SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+25 '*** PUNTO ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 PSET(32,32),15
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+35 '*** LINEA ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 LINE(76,32)-(116,32),8 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+45 '*** RECTANGULO ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 LINE(135,12)-(180,52),12,B
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+55 '*** PINTAR UN RECTANGULO *** 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 LINE(204,12)-(244,52),8, BF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+65 '*** CIRCULO *** 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 CIRCLE(32,96),20,5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+75 '*** PINTAR UN CIRCULO ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 CIRCLE(96,96),20,4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 PAINT(96,96),4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+95 '*** ELIPSE HORIZONTAL ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 CIRCLE(160,96),20,15,,,.5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+105 '** PINTAR UNA ELIPSE HORIZONTAL ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 CIRCLE(224,96),20,13,,,.5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 'PAINT(224,96),13
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+125 '*** ELIPSE VERTICAL ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 CIRCLE(32,160),20,2,,,2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135 '*** PINTAR UNA ELIPSE VERTICAL	***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 CIRCLE(96,160),20,11,,,2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 DRAW "c2bm140,160 rl0e20f5r10e10f5e10r5e5f10r5f10"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+155 '*** MACROLENGUAJE GRAFICO ***
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 GOTO 170
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## DSKF
 
@@ -7221,7 +8276,7 @@ ON SPRITE GOSUB número de línea
 |-----------------|-----------------------------------------------|
 
 
-### Ejemplos
+### Ejemplo 1
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 10 ON SPRITE GOSUB 1000
@@ -7231,6 +8286,72 @@ ON SPRITE GOSUB número de línea
 Cuando se produce el choque de dos sprites, las líneas anteriores transfieren la
 ejecución a una subrutina que comienza en la línea 1000. El retorno de la
 subrutina se especifica mediante una instrucción RETURN.
+
+### Ejemplo 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 ON SPRITE GOSUB 110
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SCREEN 2,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 SPRITE$(0)=STRING$(8,CHR$(255))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 SPRITE$(1)=STRING$(8,CHR$(255))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 SPRITE ON
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 FOR I=10 TO 240
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PUT SPRITE 0,(I,100),11,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 PUT SPRITE 1,(250-I,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 GOTO 50
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+105 REM SPRITE COLLISION ROUTINE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 SPRITE OFF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 BEEP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 RETURN
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dos sprites que se mueven en la misma línea horizontal y en distintos planos (0
+y 1), pero al cruzarse, suena un BEEP, gracias a la línea 10 que activa la
+detección de colisión de sprites.
 
 ## ON STOP GOSUB
 
@@ -7576,32 +8697,32 @@ Tipo numérico en notación decimal.
 
 Emite un sonido de acuerdo con los comandos especificados.
 
-| **Comando**                                | **Condición**                              | **Significado**                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-|--------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|---|---|---|---|---|---|---|---|---|---|
-| Tn                                         | Enteros de 32≤n≤255                        | Especifica la velocidad de ejecución de la música. El valor de n indica la cuenta de un cuarto de nota durante un minuto. La selección inicial es T120.                                                      |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (tiempo)                                   |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| On                                         | Enteros de 1≤n≤8                           | Especifica una de las 8 octavas. Cuando se especifica 04, ejecuta la música dentro de la escala mostrada a continuación.                                                                                     |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (octava)                                   |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| Ln                                         | Enteros de 1≤n≤64                          | Indica la duración del sonido.                                                                                                                                                                               |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (duración)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| L1                                         | L2                                         | L4                                                                                                                                                                                                           | L8                                         | L16                                        | L32                                        | L64                                        |   |   |   |   |   |   |   |   |   |   |
-| w                                          | h                                          | q                                                                                                                                                                                                            | e                                          | s                                          | [./media/image7.jpeg](./media/image7.jpeg) | [./media/image8.jpeg](./media/image8.jpeg) |   |   |   |   |   |   |   |   |   |   |
-| Nn                                         | Enteros de 0≤n≤96                          | [./media/image6.png](./media/image6.png) Especifica una nota musical.                                                                                                                                        |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (nota)                                     |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| A-G                                        | Enteros de 1≤n≤64                          | Especifica la nota musical de una octava especificada.                                                                                                                                                       |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| An-Gn                                      |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (nota)                                     |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| Rn                                         | Enteros de 1≤n≤64                          | Especifica un silencio.                                                                                                                                                                                      |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (silencio)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| R1                                         | R2                                         | R4                                                                                                                                                                                                           | R8                                         | R16                                        | R32                                        | R64                                        |   |   |   |   |   |   |   |   |   |   |
-| [./media/image10.png](./media/image10.png) | [./media/image11.png](./media/image11.png) | [./media/image12.png](./media/image12.png)                                                                                                                                                                   | [./media/image13.png](./media/image13.png) | [./media/image14.png](./media/image14.png) | [./media/image15.png](./media/image15.png) | [./media/image16.png](./media/image16.png) |   |   |   |   |   |   |   |   |   |   |
-| .                                          |                                            | Especifica el puntillo musical. La duración de la nota se amplía en ½ de la nota o silencio que lo lleva delante. C4 = j R4 = J                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (puntillo)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| Vn                                         | Enteros de 0≤0≤15                          | Especifica el volumen. El volumen aumenta al aumentar n. La posición inicial es V8.                                                                                                                          |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (volumen)                                  |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| Sn                                         | Enteros de 0≤n≤15                          | Especifica el modelo de variación del volumen entre los siguientes: La selección inicial es S1. La generación de muchos sonidos diferentes es el resultado de la combinación del comando S con el comando M. |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| (forma)                                    |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
-| Mn (modulación)                            | Enteros de 1≤n≤65535                       | Determina el ciclo del modelo especificado por el comando S. El ciclo se alarga al aumentar el valor de n. La selección inicial es M255.                                                                     |                                            |                                            |                                            |                                            |   |   |   |   |   |   |   |   |   |   |
+| **Comando**                                | **Condición**                              | **Significado**                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+|--------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|---|---|---|---|---|---|---|---|---|---|
+| Tn                                         | Enteros de 32≤n≤255                        | Especifica la velocidad de ejecución de la música. El valor de n indica la cuenta de un cuarto de nota durante un minuto. La selección inicial es T120.                                                      |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (tiempo)                                   |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| On                                         | Enteros de 1≤n≤8                           | Especifica una de las 8 octavas. Cuando se especifica 04, ejecuta la música dentro de la escala mostrada a continuación.                                                                                     |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (octava)                                   |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| Ln                                         | Enteros de 1≤n≤64                          | Indica la duración del sonido.                                                                                                                                                                               |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (duración)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| L1                                         | L2                                         | L4                                                                                                                                                                                                           | L8                                         | L16                                        | L32                                        | L64                                          |   |   |   |   |   |   |   |   |   |   |
+| w                                          | h                                          | q                                                                                                                                                                                                            | e                                          | s                                          | [./media/image9.jpeg](./media/image9.jpeg) | [./media/image10.jpeg](./media/image10.jpeg) |   |   |   |   |   |   |   |   |   |   |
+| Nn                                         | Enteros de 0≤n≤96                          | [./media/image8.png](./media/image8.png) Especifica una nota musical.                                                                                                                                        |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (nota)                                     |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| A-G                                        | Enteros de 1≤n≤64                          | Especifica la nota musical de una octava especificada.                                                                                                                                                       |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| An-Gn                                      |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (nota)                                     |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| Rn                                         | Enteros de 1≤n≤64                          | Especifica un silencio.                                                                                                                                                                                      |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (silencio)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| R1                                         | R2                                         | R4                                                                                                                                                                                                           | R8                                         | R16                                        | R32                                        | R64                                          |   |   |   |   |   |   |   |   |   |   |
+| [./media/image12.png](./media/image12.png) | [./media/image13.png](./media/image13.png) | [./media/image14.png](./media/image14.png)                                                                                                                                                                   | [./media/image15.png](./media/image15.png) | [./media/image16.png](./media/image16.png) | [./media/image17.png](./media/image17.png) | [./media/image18.png](./media/image18.png)   |   |   |   |   |   |   |   |   |   |   |
+| .                                          |                                            | Especifica el puntillo musical. La duración de la nota se amplía en ½ de la nota o silencio que lo lleva delante. C4 = j R4 = J                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (puntillo)                                 |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| Vn                                         | Enteros de 0≤0≤15                          | Especifica el volumen. El volumen aumenta al aumentar n. La posición inicial es V8.                                                                                                                          |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (volumen)                                  |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| Sn                                         | Enteros de 0≤n≤15                          | Especifica el modelo de variación del volumen entre los siguientes: La selección inicial es S1. La generación de muchos sonidos diferentes es el resultado de la combinación del comando S con el comando M. |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| (forma)                                    |                                            |                                                                                                                                                                                                              |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
+| Mn (modulación)                            | Enteros de 1≤n≤65535                       | Determina el ciclo del modelo especificado por el comando S. El ciclo se alarga al aumentar el valor de n. La selección inicial es M255.                                                                     |                                            |                                            |                                            |                                              |   |   |   |   |   |   |   |   |   |   |
 
 ![](media/0df15c51211ced1467dc52450915754a.png)
 
@@ -8211,7 +9332,7 @@ PSET [STEP](coordenada X, coordenada X) [,color],[operación lógica]
 | Color            | **Cond.** SCREEN 2 a 7: Constantes, variables, variables de matriz, sus expresiones (numéricas); 0≤color\<16. SCREEN 8 a 13: Constantes, variables, variables matriciales, sus expresiones (numéricas); 0≤color\<256. **Omit.** Color actual del primer plano. |
 | Operación lógica | **Cond.** SCREEN 5 a 13: PSET, PRESET, XOR, OR, AND. **Omit.** PSET.                                                                                                                                                                                           |
 
-### Ejemplos
+### Ejemplo1
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 10 SCREEN 2
@@ -8219,6 +9340,185 @@ PSET [STEP](coordenada X, coordenada X) [,color],[operación lógica]
 30 PSET (X+1, 100)	Dibuja un punto
 40 PRESET (X, 100)	Borra el punto dibujado por la línea 30
 50 NEXT X
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 REM Puntos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 R=TIME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 RDRST=RND(-R)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 SCREEN 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 REM Puntos de colores aleatorios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 FOR I%=1 TO 300
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 GOSUB 1000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 PSET(X%,Y%),Z%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 NEXT I%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 REM Borrar los puntos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 RDRST=RND(-R)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 FOR J%=1 TO 300
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 GOSUB 1000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 PRESET(X%,Y%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 NEXT J%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+999 REM Subrutina aleatoria
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1000 X%=RND(1)*256
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1010 Y%=RND(1)*192
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1020 Z%=RND(1)*16
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1030 RETURN
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Este ejemplo dibuja y borra puntos en pantalla, pero esta vez, los puntos son de
+colores aleatorios y además hacemos uso del modo gráfico SCREEN.
+
+### Ejemplo 3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 COLOR 1,7,7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 CLS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 DIM A(12),B(12)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 FOR N=1 TO 12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+135 K=N/6*3.1415927#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 A(N)=128+80*SIN(K):B(N)=88+80*COS(K)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 PSET(A(N),B(N))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 NEXT N
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 FOR N=1 TO 12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+180 FOR M=1 TO 12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+190 LINE(A(N),B(N))-(A(M),B(M))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+200 NEXT M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+210 NEXT N
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+220 GOTO 220
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Un ejemplo dibujando una figura geométrica.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## PUT
@@ -8287,7 +9587,7 @@ PUT SPRITE número de plano del sprite, [[STEP](coordenada X, coordenada Y)][,co
 | Color                     | **Cond.** Constantes, variables, variables de matriz, sus expresiones (numéricas); 0≤color\<16. **Omit.** Color actual del primer plano.                                                                                                                                            |
 | Número de sprite          | **Cond.** Para 8x8 puntos: Constantes, variables, variables de matriz, sus expresiones (numéricas); 0≤número \<256. Para 16x16 puntos: Constantes, variables, variables de matriz, sus expresiones (numéricas); 0≤número \<64. **Omit.** El mismo que el número de plano de sprite. |
 
-### Ejemplos
+### Ejemplo 1
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 10 SCREEN 2
@@ -8306,6 +9606,748 @@ plano de sprite es el 0. Como se ha omitido el color, es el mismo que el color
 de primer plano seleccionado anteriormente. El OVNI da la impresión de volar por
 la pantalla debido al cambio de los valores de las coordenadas X, Y, que
 especifican su posición.
+
+### Ejemplo 2
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 FOR I=1 TO 32
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 READ B%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 S$=S$+CHR$(B%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 SPRITE$(0)=S$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PUT SPRITE 0,(100,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 DATA 31,63,96,199,200,104,100,51
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 DATA 52,27,24,12,12,6,3,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 DATA 248,252,6,227,19,22,38,204
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 DATA 44,216,24,48,48,96,192,128
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dibujamos en pantalla un sprite y lo mostramos.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 3
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SPRITE$(0)=STRING$(8,CHR$(255))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 FOR X=200 TO -200 STEP -1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PUT SPRITE 0,(X,100),1,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 FOR D=1 TO 50:NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Usamos el carácter 255 (cursor) como sprite y lo desplazamos de derecha a izquierda.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 4
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 FOR I=1 TO 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 READ A$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 S$=S$+CHR$(VAL("&B"+A$))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 SPRITE$(0)=S$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PUT SPRITE 0,(100,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 REM BINARY DATA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 DATA 00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 DATA 00110000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 DATA 01110000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 DATA 11111111
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 DATA 11111111
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 DATA 01110000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 DATA 00110000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 DATA 00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Otro modo de crear un sprite usando DATA con valores binarios.
+
+### Ejemplo 5
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SPRITE$(0)=CHR$(16)+CHR$(48)+CHR$(112)+CHR$(255)+CHR$(255)+CHR$(112)+CHR$(48)+CHR$(16)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 SPRITE$(1)=CHR$(224)+CHR$(192)+CHR$(128)+CHR$(0)+CHR$(0)+CHR$(128)+CHR$(192)+CHR$(224)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PUT SPRITE 0,(20,20),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 PUT SPRITE 1,(40,40),10,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 PUT SPRITE 2,(60,60),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PUT SPRITE 3,(60,60),10,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mezclando sprites.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 6
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+05 REM The Fifth Sprite Rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SPRITE$(0)=STRING$(8,CHR$(255))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 PUT SPRITE 0,(20,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PUT SPRITE 1,(40,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 PUT SPRITE 2,(60,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 PUT SPRITE 3,(80,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 PUT SPRITE 4,(100,100),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 GOTO 80
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+La regla del quinto sprite. Que se pinta, pero no se ve.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 7
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+05 REM How To Animate your Sprites
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SPRITE$(0)=CHR$(60)+CHR$(126)+CHR$(129)+CHR$(219)+CHR$(126)+CHR$(36)+CHR$(36)+CHR$(36)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 SPRITE$(1)=CHR$(60)+CHR$(126)+CHR$(129)+CHR$(219)+CHR$(126)+CHR$(36)+CHR$(60)+CHR$(129) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PUT SPRITE 0,(100,100),11,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 FOR I=1 TO 500:NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 PUT SPRITE 0,(100,100),11,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 FOR I=1 TO 500:NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 GOTO 40
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Un ejempo de animación de un sprite con dos frames (fotogramas).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 8
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+05 REM Two planets orbiting a Sun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 SCREEN 2,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 COLOR 15,1,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 CLS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 SPRITE$(0)=CHR$(126)+STRING$(6,CHR$(255))+CHR$(126)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 SPRITE$(1)=STRING$(3,CHR$(0))+CHR$(24)+CHR$(24)+STRING$(3,CHR$(0))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 FOR I=0 TO 6.28 STEP 0.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 X=X+1.5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 Y=Y+1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 X1=30*COS(I)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 Y1=30*SIN(I)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 X2=15*COS(I)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 Y2=15*SIN(I)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 PUT SPRITE 0,(X,Y),11,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 PUT SPRITE 1,(X1+X,Y1+Y),9,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 PUT SPRITE 2,(X2+X,Y2+Y),15,1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 GOTO 60
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Una pequeña animación de tres sprites simulando un sol y dos planetas orbitando.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Ejemplo 9
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 COLOR 15,4,7
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SCREEN 1,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 CLS:KEY OFF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 FOR L=0 TO 4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 FOR I=1 TO 8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 READ D$(L)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 S$(L)=S$(L)+CHR$(VAL("&B"+D$(L)))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+80 NEXT I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+90 SPRITE$(L)=S$(L)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+100 NEXT L
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+110 PUT SPRITE 0,(120,90),15,0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+120 FOR I=0 TO L-1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+130 PUT SPRITE 0,STEP(2,0),15,I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+140 FOR T=1 TO 20:NEXT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+150 NEXT I:GOTO 120
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+160 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+170 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+180 DATA 00011100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+190 DATA 00101000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+200 DATA 00001100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+210 DATA 00001010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+220 DATA 00010010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+230 DATA 00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+240 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+250 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+260 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+270 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+280 DATA 00011100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+290 DATA 00001010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+300 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+310 DATA 00010100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+320 DATA 00010010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+330 DATA 00000010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+340 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+350 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+360 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+370 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+380 DATA 00011110
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+390 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+400 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+410 DATA 00110100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+420 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+430 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+440 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+450 REM 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+460 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+470 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+480 DATA 00001100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+490 DATA 00001010
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+500 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+510 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+520 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+530 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+540 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+550 REM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+560 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+570 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+580 DATA 00001100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+590 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+600 DATA 00010100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+610 DATA 00000100
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+620 DATA 00001000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+630 DATA 00010000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+En este ejemplo, tenemos un sprite en movimiento usando cinco frames y en SCREEN 1.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ejemplo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Description
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## READ
 
@@ -8888,6 +10930,40 @@ seguir en el modo gráfico hay que añadir al final del programa una instrucció
 que mantenga el ordenador en este estado, como es el caso de la línea 50 del
 programa anterior. Esta línea mantiene el programa en ejecución; para poner
 término a la ejecución, se debe pulsar CRTL+STOP.
+
+Un ejemplo de cómo mostrar texto en distintos modos gráficos:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10 FOR M=0 TO 3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 SCREEN M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+30 IF M<2 THEN OPEN "CRT:" AS #1 ELSE OPEN "GRP:" AS #1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+40 PRINT#1,"THIS IS MODE ";M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+50 IF NOT STRIG(0) THEN 50
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+60 CLOSE#1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 NEXT M
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## SET ADJUST
 
@@ -11281,6 +13357,10 @@ _bucle$:
 	jr _bucle$
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Supongamos que tenemos el código anterior en un archivo de texto "test.asm".
 Podemos compilar nuestro ejemplo para generar una ROM MSX de 16Kb de la
 siguiente forma:
@@ -11337,6 +13417,10 @@ class MyGame
 		}
 	}
 }			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Supongamos que tenemos dicho ejemplo en un archivo "test.pi". Vamos a proceder a
@@ -11617,6 +13701,10 @@ Ejemplos
 ASSIGN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Elimina todas las unidades lógicas asignadas.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -11628,6 +13716,10 @@ sobre la unidad A: se realizará en la unidad B:.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ASSIGN A:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mostrará en pantalla que A: es lo mismo que B:.
@@ -11678,10 +13770,18 @@ Marca el directorio llamado DIR1 como oculto.
 ATDIR -H DIR1/H
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Marca el directorio oculto DIR1 como visible.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ATDIR +H DIR?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Marca como ocultos los directorios que coincidan con DIR? (por ejemplo: DIR1,
@@ -11792,11 +13892,19 @@ Ejecutamos MSXVR BASIC.
 BASIC MYPROG.BAS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Arrancamos el VR-BASIC y este a su vez cargará el programa MYPROG.BAS y lo
 ejecutará.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BASIC MYPROG2.BAS /model MSXTR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Arrancamos el VR-BASIC con una máquina virtual modelo MSXturboR, y este a su vez
@@ -11938,11 +14046,19 @@ Ejemplos
 CHKDSK B:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Se comprueba el disco de la unidad actual. Los errores encontrados no se
 grabarán en el disco.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CHKDSK B:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Se analiza el disco en la unidad B:. Los errores encontrados no se grabarán en
@@ -11974,6 +14090,10 @@ Ejemplos
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CLS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La pantalla se borra y se puede escribir otro comando.
@@ -12013,6 +14133,10 @@ COMMAND2
 A:/>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Se carga otra copia de COMMAND2, e imprime su símbolo de sistema normal. EXIT
 saldrá de nuevo al símbolo de sistema original.
 
@@ -12028,6 +14152,10 @@ previo y ejecutará el comando justo a continuación de este.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CONCAT [/H] [/P] [/B] [/A] [/V] compound-filespec filespec
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Concatena los archivos.
@@ -12075,6 +14203,10 @@ Ejemplos
 CONCAT *.DOC ALL.PRN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Se crea un nuevo archivo denominado ALL.PRN y todos los archivos que coincidan
 con \*.DOC (por ejemplo FILE1.DOC, FILE2.DOC y FILE3.DOC) se unen y se escriben
 en el nuevo archivo, en el orden en que se encuentran en el disco. Cualquier
@@ -12100,7 +14232,9 @@ en la concatenación. Al haber usado /H, los archivos ocultos también se
 concatenan y, dado que se usó /P, se solicita pulsar una tecla si el número de
 líneas de la lista de archivos es mayor que el de la pantalla.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CONCAT /B FILE2.DOC + FILE3.DOC + FILE1.DOC ALL.DOC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Se crea un nuevo archivo ALL.DOC y los archivos FILE2.DOC, FILE3.DOC y FILE1.DOC
 se unen en ese orden, y en modo binario, y se escriben en el nuevo archivo.
@@ -12109,6 +14243,10 @@ se unen en ese orden, y en modo binario, y se escriben en el nuevo archivo.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CONFIG [/action] [/module [param][param]] 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Permite cambiar los parámetros de configuración del sistema o aplicar acciones
@@ -12187,6 +14325,10 @@ Ejemplos
 COPY [/A] [/H] [/T] [/V] [/P] [/B] [/S] source dest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Copia datos de archivos o dispositivos a otros archivos o dispositivos.
 
 Uso
@@ -12197,6 +14339,10 @@ La definición de source es
      compound-filespec | device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 El compound-filespec especifica los archivos que se van a copiar. Puede ser la
 especificación del dispositivo. Si se usa /H entonces se pueden copiar archivos
 ocultos.
@@ -12205,6 +14351,10 @@ La definición de dest es:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      [d:] [path] [filename] | device
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Por defecto d: y path hacen referencia a la unidad de disco y al directorio,
@@ -12271,6 +14421,10 @@ Ejemplos
 COPY FILE1 B:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 El archivo FILE1 se copia desde el directorio actual de la unidad actual al
 directorio actual de la unidad B:.
 
@@ -12278,11 +14432,19 @@ directorio actual de la unidad B:.
 COPY /H MSXDOS2.SYS + COMMAND2.COM B:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Los dos archivos ocultos MSXDOS2.SYS y COMMAND2.COM se copian en la unidad B:,
 convirtiéndolo en un disco de arranque.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COPY A:\DIR1 B:\DIR1 /V
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Todos los archivos del directorio DIR1 desde la raíz de la unidad A: se copian
@@ -12293,11 +14455,19 @@ los archivos se escribieron correctamente.
 COPY B:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Todos los archivos del directorio actual de la unidad B: se copian en el
 directorio actual de la unidad actual.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COPY /A AUX CON
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Los caracteres se leen desde el dispositivo AUX (que se puede utilizar para la
@@ -12306,6 +14476,10 @@ realiza hasta el primer carácter de fin de archivo.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COPY A:*.DOC B:/T
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Todos los archivos del directorio actual de la unidad A: que coinciden con
@@ -12323,6 +14497,10 @@ COPY *.BAT
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   REBOOT.BAT -- File cannot be copied onto itself
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este comando le indicó a COPY que copiara todos los archivos \*.BAT (en este
@@ -12354,6 +14532,10 @@ se copió en realidad en ninguna parte.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COLOR [foreground [background [border]]]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Uso
@@ -12434,14 +14616,6 @@ No se dio ningún parámetro, por lo que se mostró la fecha actual del 18 de ju
 de 1986 y se solicitó una nueva fecha. En la respuesta a la solicitud, la fecha
 se actualizó al día siguiente solo especificando el 19. Como el año y el mes no
 fueron introducidos, permanecieron iguales.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SET DATE = DD-MM-YY
@@ -12614,12 +14788,19 @@ Es importante saber que el disco destino será borrado por completo.
 Si se usa /X, entonces se suprimirán los mensajes mostrados durante la operación
 de copia de disco.
 
+Tanto el disco de origen como el destino podrá ser o bien una unidad lógica (A:,
+B:, etc.) o bien un archivo con formato de imagen de disco (por ejemplo .DSK)
+
 Ejemplos
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 DISKCOPY A: B:
  Content of B: will be deleted. 
  Do you want continue (Y/N)?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 El comando copia el disco en la unidad A: al disco en la unidad
@@ -12666,6 +14847,10 @@ DSKTOOL /A mydsk.dsk text.txt ./images/bmp1.pic
 ECHO [text]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Imprime \<text\>.
 
 Uso
@@ -12684,11 +14869,19 @@ ECHO AUTOEXEC batch file executed
  AUTOEXEC batch file executed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 El texto especificado ('AUTOEXEC batch file executed') se muestra en la
 pantalla.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ECHO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 No se teclearon parámetros, por lo que solo se mostró una línea en blanco.
@@ -12760,6 +14953,10 @@ Ejemplos
 ERASE FILE1.BAK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 El archivo FILE1.BAK se borra del directorio actual de la unidad actual.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12796,6 +14993,10 @@ DEL *.BAT
 EXIT [number]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Sale de COMMAND2.COM al programa de invocación.
 
 Uso
@@ -12820,6 +15021,10 @@ Ejemplos
 EXIT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Se sale del intérprete de comandos. Lo que suceda a continuación depende de
 quién lo invocó.
 
@@ -12836,6 +15041,10 @@ de comandos muestra el mensaje de error en primer lugar.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 FIXDISK [d:] [/S]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Actualiza un disco al formato MSX-DOS 2 completo en unidades de disco flexible
@@ -12870,6 +15079,10 @@ FIXDISK B: /S
  Press any key to continue... 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 La unidad B: se actualizará para que sea totalmente compatible con MSX-DOS 2.
 Dado que el disco puede haber sido un disco de arranque de otro sistema, se
 emite un aviso antes de que el disco se actualice.
@@ -12878,6 +15091,10 @@ emite un aviso antes de que el disco se actualice.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 FORMAT [d:] [/FAT12] [/FAT16] [/FAT32] [/NTFS] [/EXT4] [/S640] [/S720] [/S1440] [/S1232] [/S1200]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Formatea (inicializa) un disco.
@@ -12901,12 +15118,20 @@ FORMAT B:
  Press space to continue... 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Este comando formatea el disco en la unidad B:. A continuación, se muestra el
 mensaje de advertencia estándar. Si queremos abortar el comando, podremos
 cancelar la operación mediante CTRL+C o CTRL+STOP.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 FORMAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Esto formateará la unidad actual.
@@ -12941,12 +15166,19 @@ Uso
 | /INP \<port\>                                       | Leer el valor de un puerto.                                                                                                                                                                                                                                                        |
 | /RESET                                              | Aplicar un RESET a todo el interfaz GR.                                                                                                                                                                                                                                            |
 | /FAST                                               | Permitir la ejecución en modo rápido de algunos comandos. Por defecto está desactivada.                                                                                                                                                                                            |
+| /IN \<input\>                                       | Establece un archivo de entrada. Se utiliza en conversión o aplicación de parches.                                                                                                                                                                                                 |
+| /OUT \<output\>                                     | Establece un archivo de salida. Se utiliza en conversión o aplicación de partches.                                                                                                                                                                                                 |
+| /IPS \<path\>                                       | Indica el archivo con formato IPS para aplicarse sobre un archivo de entrada y que generará un archivo de salida.                                                                                                                                                                  |
 | /?                                                  | Mostrar la ayuda asociada en pantalla.                                                                                                                                                                                                                                             |
 
 ## HELP
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 HELP [subject][/rebuild][/expandall]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Proporciona ayuda en línea relacionada con los conceptos indicados en
@@ -12983,10 +15215,36 @@ HELP COPY Sería equivalente a COPY /?
 
 HELP Make me win 1000000\$ Prueba a ver qué pasa
 
+## HISTORY
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HISTORY [/P] [/CLEAN]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Lista de comandos usados más recientes.
+
+Uso
+
+Si se invoca sin parámetros mostrará por pantalla y en diferentes líneas, los
+comandos ejecutados en la consola VR-DOS.
+
+Mediante el parámetro /P podemos pausar la salida por pantalla y mediante /CLEAN
+se limpiará el contenido de la lista.
+
+Ejemplos
+
+HISTORY
+
+HISTORY /P
+
 ## KILL
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 KILL [/PID id]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Muestra la lista de procesos en marcha y además permite eliminarlos.
@@ -13204,7 +15462,7 @@ afectado en absoluto.
 ## MOUNT
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MOUNT [/U] [/RW] [drive:] [source]
+MOUNT [/U] [/RW] [drive:] [username:password@][source]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Permite el montaje y desmontaje de unidades lógicas para gestión de directorios
@@ -13245,13 +15503,24 @@ Ejemplos
 MOUNT /U A:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Desmonta la unidad A:.
+Desmonta la unidad A:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MOUNT /RW E: ftp://google.com/users/nirvana
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Monta una unidad E: para acceder al FTP indicado como parámetro.
+
+MOUNT /RW B: SAMBA:MSXVR:MSXVR\@192.168.0.198/Datos
+
+Monta una unidad B: para acceder al recurso compartido en red, Datos, ubicado en
+la IP 192.168.0.198 para la cual, nos hemos identificado con el usuario MSXVR y
+password MSXVR.
+
+MOUNT /RW B: FTP:MSXVR:MSXVR\@msxlibrary.ddns.net
+
+Monta una unidad B: para acceder al ftp indicado, para el cual, nos hemos
+identificado con el usuario MSXVR y password MSXVR.
 
 MOUNT /RW A: C:/TEMP/DISK.DSK
 
@@ -13445,7 +15714,7 @@ de pulsación de una tecla.
 ## PLAY
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PLAY [source] [/SYSTEM system] [/MODEL model] [/VERSION] [/WIZARD] [/PORTA port] [/PORTB port] [/STI path] [/SPEED speed] [/DEV device] [/CART1 path] [/CART2 path] [/CART3 path] [/CART4 path] [/MAPPER1 mapper] [/MAPPER2 mapper] [/MAPPER3 mapper] [/MAPPER4 mapper] [/MSX1] [/MSX2] [/MSX2+] [/MSXturboR] [/SCC] [/OBSONET] [/FMPAC] [/PSG] [/MSXMUSIC] [/MSXAUDIO] [/IPS1 path] [/IPS2 path] [/IPS3 path] [/IPS4 path] [/tape path] [/DSK1 path] [/DSK2 path] [/DSK3 path] [/DSK4 path] [/GRSLOT1 params] [/GRSLOT2 params] [/VRT [path]]
+PLAY [source] [/SYSTEM system] [/MODEL model] [/VERSION] [/WIZARD] [/PORTA port] [/PORTB port] [/STI path] [/SPEED speed] [/DEV device] [/CART1 path] [/CART2 path] [/CART3 path] [/CART4 path] [/MAPPER1 mapper] [/MAPPER2 mapper] [/MAPPER3 mapper] [/MAPPER4 mapper] [/MSX1] [/MSX2] [/MSX2+] [/MSXTR] [/SCC] [/OBSONET] [/FMPAC] [/PSG] [/MSXMUSIC] [/MSXAUDIO] [/IPS1 path] [/IPS2 path] [/IPS3 path] [/IPS4 path] [/tape path] [/DSK1 path] [/DSK2 path] [/DSK3 path] [/DSK4 path] [/GRSLOT1 params] [/GRSLOT2 params] [/VRT [path]] [/VRTDRV drv] [/VRISET mapper] [/SAFEMODE] [/VIRTUALIZED]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ejecuta y reproduce diferentes tipos de formatos multimedia.
@@ -13466,6 +15735,7 @@ Extensiones soportadas y aplicaciones que se lanzan:
 | .CAS                   | Máquina virtual - Formato digitalizado del contenido de una cinta de casete. Arranca una máquina MSX.                                                                    |
 | .TAP                   | Máquina virtual - Formato digitalizado del contenido de una cinta de casete. A menos que se establezca un modelo o sistema distinto, por defecto arranca una máquina ZX. |
 | .TZX                   | Máquina virtual - Formato digitalizado del contenido de una cinta de casete. Arranca una máquina ZX.                                                                     |
+| .TSX                   | Máquina virtual - Formato digitalizado del contenido de una cinta de casete. Arranca una máquina MSX.                                                                    |
 | .CDT                   | Máquina virtual - Formato digitalizado del contenido de una cinta de casete. Arranca una máquina CPC.                                                                    |
 | .Z80                   | Máquina virtual - Binario con el estado guardado de una máquina ZX. Arranca una máquina ZX.                                                                              |
 | .T64                   | Máquina virtual - Imagen de un casete de C64. Arranca una máquina C64.                                                                                                   |
@@ -13550,6 +15820,10 @@ Parámetros:
 | /GFX9000                                                | Usar emulación del V9990.                                                                                                                                                                           |   |   |   |   |   |   |   |   |   |   |
 | /VRT                                                    | Lanzar VRTunnel en la unidad y carpeta actuales. La unidad se montará como C:                                                                                                                       |   |   |   |   |   |   |   |   |   |   |
 | /VRT path                                               | Lanzar VRTunnel usando la ruta que establezcamos. La unidad se montará como C:                                                                                                                      |   |   |   |   |   |   |   |   |   |   |
+| /VRTDRV drive                                           | Indicar otra unidad de montaje diferente a C: para el VRTunnel.                                                                                                                                     |   |   |   |   |   |   |   |   |   |   |
+| /VRISET                                                 | En el caso de usar un mapper de tipo VRI (MSXVR Slots) se fuerza el tipo de estrategia utilizar para acceder al slot.                                                                               |   |   |   |   |   |   |   |   |   |   |
+| /SAFEMODE                                               | Activa el modo seguro de tiempos para el acceso a los cartuchos en tiempo real.                                                                                                                     |   |   |   |   |   |   |   |   |   |   |
+| /VIRTUALIZED                                            | Desactiva cualquier tipo de cache y obliga a un acceso completo en tiempo real.                                                                                                                     |   |   |   |   |   |   |   |   |   |   |
 
 Ejemplos
 
@@ -13560,11 +15834,12 @@ Ejemplos
 | play                               | Lanzará el explorador de archivos por defecto.                                                     |
 | play /w                            | Abrirá el asistente.                                                                               |
 | play \*.rom /vrt                   | Abrirá una máquina MSX con el sistema VRTunnel accediendo a la carpeta y unidad en la que estemos. |
+| play \*.rom /vrtdrv A: /vrt        | Abre una máquina MSX usando VRTunnel y mapeando la unidad en A: para MSXDOS                        |
 
 ## PKG
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PKG [/CLEAN] [/BACKUP] [/UPDATE] [/CHECK] [/FIND] [/INSTALL name] [/REMOVE name]
+PKG [/CLEAN] [/BACKUP] [/UPDATE] [/CHECK] [/FIND] [/INSTALL name] [/REMOVE name] [/Y]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gestiona la instalación de versiones del sistema operativo y de aplicaciones.
@@ -13573,19 +15848,28 @@ Uso
 
 Los parámetros son:
 
-| /UPDATE       | Actualiza el sistema a la última versión disponible.                       |
-|---------------|----------------------------------------------------------------------------|
-| /CHECK        | Consulta sobre el estado de las actualizaciones.                           |
-| /INSTALL name | Descarga la última versión de un paquete o aplicación.                     |
-| /REMOVE name  | Elimina un paquete o aplicación del sistema.                               |
-| /FIND         | Muestra los paquetes o aplicaciones disponibles para ser actualizados.     |
-| /CLEAN        | Limpia la base de datos para realizar una actualización que parta de cero. |
-| /BACKUP       | Sobrescribe la versión de copia de seguridad con la actualizada.           |
+| /UPDATE        | Actualiza el sistema a la última versión disponible.                       |
+|----------------|----------------------------------------------------------------------------|
+| /CHECK         | Consulta sobre el estado de las actualizaciones.                           |
+| /INSTALL name  | Descarga la última versión de un paquete o aplicación.                     |
+| /REMOVE name   | Elimina un paquete o aplicación del sistema.                               |
+| /FIND wildcard | Muestra los paquetes o aplicaciones disponibles para ser actualizados.     |
+| /CLEAN         | Limpia la base de datos para realizar una actualización que parta de cero. |
+| /BACKUP        | Sobrescribe la versión de copia de seguridad con la actualizada.           |
+| /Y             | Evita las confirmaciones y las acepta por defecto.                         |
 
 Ejemplos
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PKG /CLEAN /UPDATE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PKG /FIND *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -13725,6 +16009,10 @@ actual de la unidad actual, se renombran con la extensión .OLD.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 RESET [/HW]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Uso
@@ -13983,26 +16271,17 @@ podremos establecer la zona horaria indicando la ciudad de referencia.
 
 Ejemplos
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TIME 16:45  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Se establece la hora actual a las 4:45 p.m.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TIME
- Current time is 10:45:00a
- Enter new time: 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-No se han introducido parámetros, por lo que se muestra la hora actual (en este
-caso en el modo de 12 horas) y se solicita una nueva hora.
+| TIME 16:45                                      | Se establece la hora actual a las 4:45 p.m.                                                                                                |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| TIME                                            | No se han introducido parámetros, por lo que se muestra la hora actual (en este caso en el modo de 12 horas) y se solicita una nueva hora. |
+| Current time is 10:45:00a                       |                                                                                                                                            |
+| Enter new time:                                 |                                                                                                                                            |
+| TIME 10-50-30-23                                | La hora se fija en las 10:50 a.m. con 30 segundos y 23 centésimas.                                                                         |
+| TIME /A /Z Madrid                               | Establece hora automática y zona horaria de Madrid.                                                                                        |
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TIME 10-50-30-23
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La hora se fija en las 10:50 a.m. con 30 segundos y 23 centésimas.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## TYPE
 
@@ -14119,13 +16398,16 @@ Ejemplos
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 VER
- VR-DOS Kernel version 1.0.0
- MSXVR version 0.1.0
- MSXVR build 13625
+ VR-DOS version 1.0 build 790
+ MSXVR version 0 build 16000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ VR-ENGINE version 6 build 900
  S/N: 0000-0000-0000-0000
  ALIAS: Zanac
  UDID: 00-00-00-00-00-00-00-00
- (c) MSXVRTeam Corp. 2013-2020
+ (c) MSXVRTeam Corp. 2013-2021
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15777,6 +18059,7 @@ diferentes condiciones y funcionalidades del compilador.
 | \*=    | Multiplicar              | Multiplicar         | Insertar espacio en índice                                      | Insertar cero en índice                                     |
 | /      | Dividir                  | Dividir             |                                                                 |                                                             |
 | /=     | Dividir                  | Dividir             | Quitar elemento en índice                                       | Quitar elemento en índice                                   |
+| /\\    | División Entera          | División Entera     |                                                                 |                                                             |
 | \*\*   | Potencia                 | Potencia            |                                                                 |                                                             |
 | \*\*=  | Potencia                 | Potencia            |                                                                 |                                                             |
 | %      | Módulo                   | Módulo              |                                                                 |                                                             |
@@ -15872,6 +18155,8 @@ se gestionan como ASCII y las de 16 bits como UNICODE.
 | int("5")        | Convierte una cadena a entero                                 | 5                         |
 | int("cad")      | Convierte una cadena a entero                                 | 0                         |
 | string(5)       | Convierte un entero a cadena                                  | "5"                       |
+| float("5.56")   | Convierte una cadena a float                                  | 5.56                      |
+| string(7.8)     | Convierte un float a cadena                                   | "7.8"                     |
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 B = "153"
@@ -15884,6 +18169,9 @@ C = A & B
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A[1]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NOTA: Del mismo modo que para bool, int y float, todos los tipos numéricos son
+susceptibles de poder ser convertidos de cadena al tipo y viceversa.
 
 # Listas
 
@@ -17323,7 +19611,7 @@ como entrada o salida los pines 6/7:
 | 4       | Valor para bit de salida por Puerto A / pin 8 (STROBE/COM).                |
 | 5       | Valor para bit de salida por Puerto B / pin 8 (STROBE/COM).                |
 
-#### [./media/image22.png](./media/image22.png)
+#### [./media/image24.png](./media/image24.png)
 
 Leds
 
@@ -17342,7 +19630,7 @@ function **GetLed** (led) : bool
 Consulta el estado de un led. Devolverá verdadero si está encendido o falso si
 está apagado.
 
-#### [./media/image23.jpeg](./media/image23.jpeg)
+#### [./media/image25.jpeg](./media/image25.jpeg)
 
 Botones
 
@@ -18314,7 +20602,7 @@ propias aplicaciones. Sin embargo, podemos crear una ventana MDI para ofrecer
 otro tipo de interfaz al usuario.
 
 Para crear una aplicación que sea una ventana MDI flotante por encima de nuestra
-aplicación VR-DOS, usaremos GetWindow().CreateMDI
+aplicación VR-DOS, usaremos GetWindow().CreateMDI.
 
 *GetWindow* nos permite obtener la ventana del VR-DOS sobre la que se está
 representando la consola también. Por tanto, podemos crear uno o varios MDI
@@ -26955,3500 +29243,3 @@ en una dirección y detectar si tocamos los límites de la pantalla. En el caso 
 que toquemos alguno de los límites, cambiaremos el sentido (signo) de la
 dirección.
 
-# Glosario
-
-\_
-
-**\_eval** 444
-
-\_**get** 420
-
-**\_implements** 448
-
-**\_instanceof** 448
-
-**\_run** 444
-
-\_**set** 420
-
-\_**unset** 420
-
-A
-
-**abs** 617
-
-ABS ………………………………………………………………….. 50
-
-**acos** 617
-
-**Activate** - Frame 514
-
-**Activate** - Window 498
-
-**AddAnimation** - GL_Sprite 571
-
-**AddAnimationWithGrid** - GL_Sprite 572
-
-**AddAnimationWithList** - GL_Sprite 572
-
-**AddAnimationWithPrefix** - GL_Sprite 572
-
-**AddAnimationWithPrefixList** - GL_Sprite 572
-
-**AddAnimationWithSheet** - GL_Sprite 572
-
-**AddChild** - GL_Sprite 580
-
-**AddCircle** - GL_Route 593
-
-**AddColliderRect** - GL_Sprite 577
-
-**AddDriver** - GeekReader 473
-
-**AddEmptyFrame -** GL_Sprite 570
-
-**AddFlags** - GL_Sprite 579
-
-**AddFrame** - GL_Sprite 570
-
-**AddHotKey** - Window 498
-
-**AddItem** - ComboBox 527
-
-**AddItem** - ListBox 535
-
-**AddItem** - ToolBar 547
-
-**AddItemButton** - ToolBar 547
-
-**AddItemLabel** - ToolBar 547
-
-**AddLayer** - GL_Mapper 586
-
-**AddNode** - GL_Route 592
-
-**AddObject** - GL_Object 561
-
-**AddPhysicsShapeCircle** - GL_Sprite 581
-
-**AddPhysicsShapeRect** - GL_Sprite 581
-
-**AddPin** - Control 510
-
-**AddRect** - GL_Route 593
-
-**AddSeparator** - ToolBar 547
-
-**AddSideControl** - Window 499
-
-**AddStyle** - Window 497
-
-**AddTileSet** - GL_Mapper 587
-
-**AlertDialog** - Engine 551
-
-**AlertDialogModal** - Engine 551
-
-**AlignToParent** - Control 509
-
-**AlignToParent** - GL_Sprite 574
-
-**AngleAxisToQRotation** 625
-
-**AngleSlerp** 620
-
-**AngleXBetweenLines** 620
-
-**AngleYBetweenLines** 620
-
-**AngleZBetweenLines** 620
-
-**Apply** - ComboBox 528
-
-**ApplyForce** - GL_Sprite 583
-
-**ApplyForceToCenter** - GL_Sprite 583
-
-**ApplyLinearImpulse** - GL_Sprite 583
-
-**ApplyParams** 451, 452
-
-**ApplyTorque** - GL_Sprite 583
-
-**AreAllTexturesLoaded** - Control 513
-
-**ARGB** 638
-
-AS PP/Compiler/Linker 317
-
-ASC 51
-
-**ascii** 636
-
-**asin** 617
-
-ASSIGN 327
-
-**atan** 617
-
-**atan2** 617
-
-ATDIR 328
-
-ATN 52
-
-ATTRIB 329
-
-**AudioCaptureRead** - GeekReader 472
-
-**AudioCaptureStart** - GeekReader 472
-
-**AudioCaptureStop** - GeekReader 472
-
-AUTO 53
-
-B
-
-BASE 54
-
-BASIC 330
-
-BEEP 55
-
-**bin** 637
-
-BIN\$ 56
-
-**bin2int** 637
-
-BLOAD 57
-
-**bool** 614
-
-**break** 440
-
-**BroadcastToObjects** - GL_Object 563
-
-BSAVE 59
-
-**Buffer_Compare** 627
-
-**Buffer_Compress** 628
-
-**Buffer_Copy** 628
-
-**Buffer_Delete** 627
-
-**Buffer_Fill** 628
-
-**Buffer_Find** 628
-
-**Buffer_FromBase64String** 628
-
-**Buffer_FromHEXString** 628
-
-**Buffer_FromURLString** 628
-
-**Buffer_GetByte** 628
-
-**Buffer_GetDouble** 629
-
-**Buffer_GetFloat** 629
-
-**Buffer_GetInt** 629
-
-**Buffer_GetLong** 629
-
-**Buffer_GetShort** 629
-
-**Buffer_GetString** 629
-
-**Buffer_GetUByte** 629
-
-**Buffer_GetUCString** 629
-
-**Buffer_GetUInt** 629
-
-**Buffer_GetULong** 629
-
-**Buffer_GetURLString** 629
-
-**Buffer_GetUShort** 630
-
-**Buffer_GetUTF8String** 630
-
-**Buffer_Len** 627
-
-**Buffer_New** 627
-
-**Buffer_ReSize** 627
-
-**Buffer_SetByte** 630
-
-**Buffer_SetDouble** 630
-
-**Buffer_SetFloat** 630
-
-**Buffer_SetInt** 630
-
-**Buffer_SetLong** 630
-
-**Buffer_SetShort** 630
-
-**Buffer_SetString** 630
-
-**Buffer_SetUByte** 630
-
-**Buffer_SetUInt** 630
-
-**Buffer_SetULong** 631
-
-**Buffer_SetUShort** 631
-
-**Buffer_ToBase64String** 631
-
-**Buffer_ToHEXString** 631
-
-**Buffer_ToURLString** 631
-
-**Buffer_UnCompress** 631
-
-BUFFERS 331
-
-**BuildPhysics** - GL_Sprite 584
-
-**byte** 614
-
-C
-
-CALL 61
-
-CALL AUDIO 62
-
-CALL AUDIODRIVERBASEPORT 63
-
-CALL AUDREG 64
-
-CALL BGM 65
-
-CALL CHDIR 66
-
-CALL CHDRV 67
-
-CALL DEBUG 68
-
-CALL EDIT 69
-
-CALL FORMAT 70
-
-CALL MDR 72
-
-CALL MEMINI 73
-
-CALL MFILES 74
-
-CALL MKDIR 75
-
-CALL MKILL 76
-
-CALL MNAME 77
-
-CALL MUSIC 78
-
-CALL PCMPLAY 80
-
-CALL PCMREC 81
-
-CALL PITCH 83
-
-CALL PLAY 84
-
-CALL RAMDISK 85
-
-CALL RMDIR 86
-
-CALL SLEEP 87
-
-CALL SPEED 88
-
-CALL STOPM 89
-
-CALL SYSTEM 90
-
-CALL TEMPER 91
-
-CALL TRANSPOSE 92
-
-CALL VMACHINE 93
-
-CALL VOICE 94
-
-CALL VOICE COPY 95
-
-**CancelPowerOff** - Engine 488
-
-CDBL 96
-
-**ceil** …………………………………………………………………… 617
-
-**CenterPos** - Window 495
-
-**CenterToDesktop** - Window 499
-
-**CenterToParent** - Control 508
-
-Ch
-
-**ChangeFolder** - Engine 456
-
-**ChangeObjectOrder** - GL_Object 561
-
-CHDIR 332
-
-CHDIR / CD 332
-
-**CheckCollision** - GL_Stage 569
-
-**CheckCollisionWithSprite** - GL_Sprite 581
-
-**CheckFlags** - GL_Sprite 579
-
-**CheckIP** 451
-
-**CheckVirtualMachineConfiguration** - Engine 474
-
-CHKDSK 333
-
-CHR\$ 97
-
-C
-
-CINT 98
-
-CIRCLE 99
-
-**clamp** 617
-
-**ClampToScreen** - Control 506
-
-CLEAR 101
-
-**Clear** - ToolBar 547
-
-**ClearFonts** - Frame 514
-
-**ClearFrames** - Image 530
-
-**ClearItems** - ComboBox 527
-
-**ClearItems** - ListBox 533
-
-**ClearLayers** - GL_Mapper 586
-
-**ClearNodes** - GL_Route 592
-
-**ClearObjects** - GL_Object 561
-
-**ClearPhysicsShapes** - GL_Sprite 581
-
-**ClearPin** - Control 510
-
-**ClearSelection** - ListBox 533
-
-**ClearTilesets** - GL_Mapper 587
-
-**ClientToScreen** - Window 496
-
-CLOAD 102
-
-CLOAD? 103
-
-**CloneChilds** - GL_Object 562
-
-**CloneObject** - GL_Object 562
-
-**CloneObject** - GL_Program 557
-
-**CloneVirtualMachineConfiguration** - Engine 475
-
-CLOSE 104
-
-**CloseI2C** - GeekReader 471
-
-**CloseUSBDevice** - GeekReader 472
-
-CLS …………………………………………………………… 105, 334
-
-**Cls -** DOS_Console 492
-
-COLOR 106, 108, 109, 110, 344
-
-COLOR SPRITE 111
-
-COLOR SPRITE\$ 112
-
-**Color_Bright** 638
-
-**Color_Dark** 638
-
-**Color_Distance** 638
-
-**Color_DistanceAlpha** 638
-
-**Color_FindPaletteIndex** 638
-
-**Color_GetA** 638
-
-**Color_GetB** 638
-
-**Color_GetG** 639
-
-**Color_GetR** 639
-
-**Color_SetA** 639
-
-**Color_SetB** 639
-
-**Color_SetG** 639
-
-**Color_SetR** 639
-
-**Color_Slerp** 639
-
-COMMAND2 335
-
-CONCAT 336
-
-CONFIG 338
-
-**Connect** 452
-
-CONT 113
-
-**Container_AddProperty** 640
-
-**Container_Clone** 640
-
-**Container_Copy** 640
-
-**Container_Delete** 640
-
-**Container_DelProperty** 640
-
-**Container_FromBuffer** 640
-
-**Container_FromString** 640
-
-**Container_FromXMLString** 641
-
-**Container_GetNumProperties** 641
-
-**Container_GetProperty** 641
-
-**Container_GetPropertyByIndex** 641
-
-**Container_GetPropertyNameByIndex** 641
-
-**Container_HasProperty** 641
-
-**Container_Load** 641
-
-**Container_Merge** 641
-
-**Container_New** 640
-
-**Container_Save** 641
-
-**Container_SizeOf** 641
-
-**Container_ToBuffer** 642
-
-**Container_ToString** 642
-
-**Container_ToXMLString** 642
-
-**continue** 440
-
-COPY 114, 117, 118, 341
-
-**Copy** - RichTextEditor 540
-
-COPY SCREEN 120
-
-**CopyObject** - GL_Object 563
-
-**cos** …………………………………………………………………… 617
-
-COS 121
-
-**CountProgram** - Engine 463
-
-**CreateButton** - Frame 518
-
-**CreateCheckBox** - Frame 519
-
-**CreateCollider** - GL_Sprite 584
-
-**CreateColorPicker** - Frame 516
-
-**CreateComboBox** - Frame 517
-
-**CreateControl** - Frame 515
-
-**CreateController** - GL_Sprite 584
-
-**CreateDefaultFont** - Frame 515
-
-**CreateDefaultFont** - Window 499
-
-**CreateFolder** - Engine 457
-
-**CreateFont** - Frame 515
-
-**CreateFrame** - Frame 518
-
-**CreateFX** - GL_Sprite 584
-
-**CreateGroupBox** - Frame 521
-
-**CreateImage** - Frame 516
-
-**CreateImageButton** - Frame 519
-
-**CreateLabel** - Frame 516
-
-**CreateListBox** - Frame 517
-
-**CreateNotification** - Engine 482
-
-**CreateProgressBar** - Frame 520
-
-**CreateRadioButton** - Frame 519
-
-**CreateRect** - Frame 515
-
-**CreateRecursiveFolder** - Engine 457
-
-**CreateRichTextEditor** - Frame 519
-
-**CreateScrollBar** - Frame 518
-
-**CreateScrollFrame** - Frame 518
-
-**CreateSpin** - Frame 520
-
-**CreateSplitter** - Frame 520
-
-**CreateTextBox** - Frame 517
-
-**CreateTrackbar** - Frame 518
-
-**CreateVirtualMachine** - Engine 474
-
-**CreateVirtualMachineConfiguration** - Engine 474
-
-**Crypto_CRC32** 649
-
-**Crypto_HMAC_SHA1** 649
-
-**Crypto_SHA1** 649
-
-**Crypto_SHA1_Delete** 649
-
-**Crypto_SHA1_Get** 649
-
-**Crypto_SHA1_New** 649
-
-**Crypto_SHA1_Update** 649
-
-CSAVE 122
-
-CSNG 123
-
-CSRLIN 124
-
-**CursorInRect** - Control 509
-
-**Cut** - RichTextEditor 540
-
-CVI/CVS/CVD 125
-
-D
-
-DATA 126
-
-**Database_Close** 647
-
-**Database_EndQuery** 647
-
-**Database_GetColName** 647
-
-**Database_GetColValue** 647
-
-**Database_GetLastError** 648
-
-**Database_GetNumCols** 647
-
-**Database_GetRow** 648
-
-**Database_NextQuery** 647
-
-**Database_Open** 647
-
-**Database_Query** 648
-
-**Database_ResetQuery** 647
-
-**Database_StartQuery** 647
-
-DATE 345
-
-DEF FN 127
-
-DEFDBL 128
-
-DEFINT 128
-
-DEFINT/ DEFSNG/DEFDBL/DEFSTR 128
-
-DEFSNG 128
-
-DEFSTR 128
-
-DEFUSR 129
-
-**degtorad** 617
-
-**DelBundleRegistry** - Engine 455
-
-DELETE 130
-
-**DeleteImage** - Engine 479
-
-**DeleteItem** - ListBox 535
-
-**DeleteLine** - RichTextEditor 540
-
-**DeleteObject** - GL_Object 563
-
-**DeleteObjects** - GL_Object 562
-
-**DeleteSelection** - RichTextEditor 540
-
-**DeleteText** - RichTextEditor 540
-
-**DeleteTexture** - Engine 479
-
-**DeleteTexture** - GL_Stage 566
-
-**DelRegistry** - Engine 455
-
-**DestroyAllFX** - GL_Sprite 584
-
-**DestroyCollider** - GL_Sprite 584
-
-**DestroyController** - GL_Sprite 584
-
-**DestroyFolder** - Engine 457
-
-**DestroyFont** - Frame 514
-
-**DestroyVirtualMachine** - Engine 474
-
-**DestroyVirtualMachineConfiguration** - Engine 474
-
-**Dictionary_Clear** 650
-
-**Dictionary_Delete** 650
-
-**Dictionary_DeleteItem** 650
-
-**Dictionary_FindItemKey** 650
-
-**Dictionary_Get** 650
-
-**Dictionary_GetItem** 650
-
-**Dictionary_GetItemCount** 650
-
-**Dictionary_GetItemIndex** 650
-
-**Dictionary_GetItemKey** 651
-
-**Dictionary_InsertItem** 651
-
-**Dictionary_IsKey** 651
-
-**Dictionary_New** 650
-
-**Dictionary_Set** 651
-
-**Dictionary_SetCaseSensitive** 651
-
-**Dictionary_SetItem** 651
-
-**dim** 618
-
-DIM 131
-
-DIR 347
-
-**DisableLimits** - GL_Controller 600
-
-**DisableScalePosition** - Control 511
-
-**Disconnect** 452
-
-DISKCOPY 349
-
-**DoStepDown** - ScrollBar 543
-
-**DoStepUp** - ScrollBar 543
-
-**double** 615
-
-**Download** 453
-
-DRAW 133, 134
-
-**DrawTile** - GL_Mapper 588
-
-DSKF 137
-
-DSKTOOL 350
-
-**DumpROM** - GeekReader 467
-
-E
-
-ECHO 351
-
-EDIT 352
-
-**EnableClipping** - Control 505
-
-**EnableDraw** - GL_Stage 569
-
-**EnableExternalDraw** - Control 511
-
-**EnableExternalMove** - Control 511
-
-**EnableHover** - ListBox 532
-
-**EnableLimits** - GL_Controller 600
-
-**EnableMask** - Control 512
-
-**EnablePassword** - TextBox 546
-
-**EnableScalePosition** - Control 511
-
-**EnableSlot** - GeekReader 466
-
-END 138
-
-**EndFixAnimation** - GL_Sprite 573
-
-EOF 139
-
-ERA /ERASE / DEL 353
-
-ERASE 140
-
-ERL 141
-
-ERR 142
-
-ERROR 143
-
-EXIT 354
-
-**exp** ………………………………………………………………….. 618
-
-EXP ………………………………………………………………….. 144
-
-F
-
-FIELD 145
-
-**File_Close** 663
-
-**File_Exists** 666
-
-**File_Flush** 663
-
-**File_GetAttributes** 666
-
-**File_GetDate** 666
-
-**File_GetPos** 663
-
-**File_IsEOF** 663
-
-**File_IsOpened** 666
-
-**File_Open** 663
-
-**File_Read** 664
-
-**File_ReadByte** 664
-
-**File_ReadFloat** 664
-
-**File_ReadInt** 664
-
-**File_ReadLong** 664
-
-**File_ReadShort** 664
-
-**File_ReadString** 664
-
-**File_ReadText** 664
-
-**File_Seek** 665
-
-**File_SetAttributes** 666
-
-**File_SetPos** 665
-
-**File_Size** 665
-
-**File_Write** 665
-
-**File_WriteByte** 665
-
-**File_WriteChars** 666
-
-**File_WriteFloat** 665
-
-**File_WriteInt** 665
-
-**File_WriteLong** 665
-
-**File_WriteShort** 665
-
-**File_WriteString** 666
-
-**File_WriteText** 666
-
-**FileClose** - Engine 459
-
-**FileCopy** - Engine 460
-
-**FileDelete** - Engine 459
-
-**FileExists** - Engine 459
-
-**FileGetAttributes** - Engine 459
-
-**FileIsOpened** - Engine 459
-
-**FileMove** - Engine 460
-
-**FileOpen** - Engine 459
-
-**FileOpenMem** - Engine 459
-
-**FileRename** - Engine 460
-
-FILES 147
-
-**FileSetAttributes** - Engine 459
-
-**FindAnimation** - GL_Sprite 573
-
-**FindDriver** - GeekReader 473
-
-**FindEnd** - GL_Route 593
-
-**FindFiles** - Engine 457
-
-**FindFolders** - Engine 458
-
-**FindHotKeyByContext** - Window 499
-
-**FindItemByText** - ComboBox 528
-
-**FindItemByUserData** - ComboBox 528
-
-**FindNext** - GL_Route 593
-
-**FindNode** - GL_Route 592
-
-**FindObject** - GL_Object 562
-
-**FindObject** - GL_Program 559
-
-**FindObjects** - GL_Object 561
-
-**FindProgram** - Engine 462
-
-**FindProgramByBundleName** - Engine 462
-
-**FindSegment** - GL_Route 592
-
-**FindStart** - GL_Route 593
-
-**FindText** - ListBox 535
-
-**FindText** - RichTextEditor 541
-
-**FindTileset** - GL_Mapper 587
-
-**FindUserData** - ListBox 535
-
-FIX 148
-
-FIXDISK 355
-
-**FlipHorizontal** - Image 531
-
-**FlipVertical** - Image 531
-
-**float** 615
-
-**floor** 617
-
-**FolderCopy** - Engine 458
-
-**FolderExists** - Engine 459
-
-**FolderIsEmpty** - Engine 457
-
-**FolderMove** - Engine 458
-
-**FolderRename** - Engine 458
-
-FOR 149
-
-FOR -NEXT 149
-
-FORMAT 356
-
-**frand** 618
-
-FRE ………………………………………………………………….. 152
-
-G
-
-**Get** ……………………………………………………………….... 453
-
-GET 153
-
-GET DATE 154
-
-GET TIME 155
-
-**GetAbsoluteLogicPath** - Engine 456
-
-**GetActive** - GL_Stage 566
-
-**GetActiveProgram** - Engine 462
-
-**GetActiveStage** - GL_Program 557
-
-**GetAlias** - Engine 489
-
-**GetAlign** - GL_Text 595
-
-**GetAlpha** - Control 511
-
-**GetAlpha** - GL_Sprite 579
-
-**GetAngle** - GL_Sprite 580
-
-**GetAnimation** - GL_Sprite 573
-
-**GetAnimationLoops** - GL_Sprite 580
-
-**GetAppsFolder** 450
-
-**GetAudioOutput** - Engine 486
-
-**GetAudioPanning** - Engine 486
-
-**GetAudioVolume** - Engine 486
-
-**GetAutoReleaseTextures** - Image 529
-
-**GetAvailableVideoFormats** - Engine 485
-
-**GetAvailableVirtualMachineConfigurations** - Engine 474
-
-**GetAvailableVirtualMachineSystems** - Engine 474
-
-**GetBehaviourClassScript** - GL_Object 564
-
-**GetBF** - GL_Sprite 575
-
-**GetBGColor** - DOS_Console 492
-
-**GetBGColor** - RichTextEditor 538
-
-**GetBinFolder** 450
-
-**GetBottom** - Control 506
-
-**GetBounds** - Control 507
-
-**GetBRColor** - DOS_Console 492
-
-**GetBroadcast** 451
-
-**GetBundleRegistry** - Engine 455
-
-**GetButtonMode** - GL_Pad 601
-
-**GetButtonValue** - GL_Pad 601
-
-**GetCameraClipH** - GL_Stage 567
-
-**GetCameraClipW** - GL_Stage 567
-
-**GetCameraClipX** - GL_Stage 567
-
-**GetCameraClipY** - GL_Stage 567
-
-**GetCameraX** - GL_Stage 567
-
-**GetCameraY** - GL_Stage 567
-
-**GetCameraZoom** - GL_Stage 568
-
-**GetCellFromPos** - GL_Mapper 588
-
-**GetCenter** - Control 507
-
-**GetCH** - GL_Sprite 578
-
-**GetChecked** - CheckBox 525
-
-**GetCheckerObj** - GL_Collider 597
-
-**GetCheckerRect** - GL_Collider 597
-
-**GetCHF** - GL_Sprite 578
-
-**GetChildren** - Control 513
-
-**GetChildrenCount** - Control 513
-
-**GetClass** - GL_Object 564
-
-**GetClassesFolder** 450
-
-**GetClassName** - GL_Sprite 580
-
-**GetClientArea** - Window 496
-
-**GetClientControl** - Frame 515
-
-**GetClientControl** - Window 495
-
-**GetClientRect** - Window 496
-
-**GetClipping** - GL_Sprite 581
-
-**GetCollider** - GL_Sprite 585
-
-**GetCollision** - GL_Sprite 577
-
-**GetCollisionSides** - GL_Collider 597
-
-**GetColor** - ColorPicker 526
-
-**GetColor** - GL_Sprite 579
-
-**GetColorAdd** - GL_Sprite 579
-
-**GetConfigPropertyBool** - Engine 454
-
-**GetConfigPropertyFloat** - Engine 454
-
-**GetConfigPropertyInt** - Engine 454
-
-**GetConfigPropertyList** - Engine 454
-
-**GetConfigPropertyString** - Engine 454
-
-**GetContentSize** - ToolBar 547
-
-**GetControlByName** - Control 513
-
-**GetControlByName** - Window 499
-
-**GetController** - GL_Sprite 584
-
-**GetCurAnimation** - GL_Sprite 573
-
-**GetCurrentLineText** - RichTextEditor 539
-
-**GetCursorLine** - RichTextEditor 539
-
-**GetCursorLinePos** - RichTextEditor 539
-
-**GetCursorPoint** - Control 509
-
-**GetCursorPos** - RichTextEditor 539
-
-**GetCW** - GL_Sprite 578
-
-**GetCWD** - Engine 456
-
-**GetCWDriveName** - Engine 456
-
-**GetCWDriveVolume** - Engine 456
-
-**GetCWF** - GL_Sprite 578
-
-**GetCWPath** - Engine 456
-
-**GetCX** - GL_Sprite 578
-
-**GetCXF** - GL_Sprite 578
-
-**GetCY** - GL_Sprite 578
-
-**GetCYF** - GL_Sprite 578
-
-**GetDatabasesFolder** 450
-
-**GetDefaultFont** - RichTextEditor 538
-
-**GetDefaultTextColor** - ListBox 536
-
-**GetDegrees** - Image 531
-
-**GetDesktop** - Frame 514
-
-**GetDHCP** 451
-
-**GetDirX** - GL_Controller 599
-
-**GetDirY** - GL_Controller 599
-
-**GetDLLFolder** 450
-
-**GetDocsFolder** 450
-
-**GetDOS** - Engine 463
-
-**GetDownloadedBytes** 453
-
-**GetDownloadsFolder** 450
-
-**GetDriveNames** - Engine 456
-
-**GetDriverProperty** - GeekReader 473
-
-**GetEffectiveAlpha** - Control 511
-
-**GetEffectiveScale** - Control 511
-
-**GetEngine** - Frame 514
-
-**GetEngine** - GL_Object 560
-
-**GetFBounds** - Control 509
-
-**GetFGColor** - DOS_Console 492
-
-**GetFGColor** - RichTextEditor 538
-
-**GetFlags** - GL_Sprite 578
-
-**GetFolderInfo** - Engine 458
-
-**GetFontName** - GL_Text 594
-
-**GetFontSize** - GL_Text 594
-
-**GetFPS** 674
-
-**GetFrame** - GL_Sprite 578
-
-**GetFrameInfo** - GL_Sprite 571
-
-**GetFramesCount** - Image 530
-
-**GetFrameTexture** - GL_Sprite 570
-
-**GetFrequency** - GL_Timer 596
-
-**GetFTime** 674
-
-**GetGateway** 451
-
-**GetGL** - GL_Object 560
-
-**GetGlobal** - GL_Stage 569
-
-**GetHCenter** - Control 507
-
-**GetHeight** - Control 506
-
-**GetHeight** - GL_Mapper 588
-
-**GetHeight** - GL_Sprite 575
-
-**GetHF** - GL_Sprite 575
-
-**GetHFlip** - GL_Sprite 576
-
-**GetHiddenSSID** 452
-
-**GetHiResTime** 675
-
-**GetHorizontalScroll** - ScrollFrame 522
-
-**GetHorizontalScrollPctg** - ScrollFrame 522
-
-**GetHorizontalScrollRange** - ScrollFrame 522
-
-**GetHoverIndex** - ListBox 533
-
-**GetIcon** - ListBox 535
-
-**GetInfoFromPos** - GL_Mapper 588
-
-**GetInstancedObject** - GL_Object 563
-
-**GetInt** 453
-
-**GetIP** 451, 452
-
-**GetItemUserData** - ComboBox 527
-
-**GetJSON** 453
-
-**GetKeyboardLayout** - Engine 480
-
-**GetLayer** - GL_Mapper 586
-
-**GetLed** - GeekReader 469
-
-**GetLeft** - Control 506
-
-**GetLibsFolder** 450
-
-**GetListHeight** - ListBox 533
-
-**GetListSize** - ListBox 533
-
-**GetLocaleLanguage** - Engine 480
-
-**GetLocalTime** 675
-
-**GetLoop** - GL_Music/Sound 590
-
-**GetMain** - GL_Stage 569
-
-**GetMaximumHeight** - Control 508
-
-**GetMaximumWidth** - Control 508
-
-**GetMaxValue** - ScrollBar 542
-
-**GetMaxValue** - Spin 544
-
-**GetMaxValue** - TrackBar 548
-
-**GetMinimumHeight** - Control 508
-
-**GetMinimumSize** - Control 508
-
-**GetMinimumWidth** - Control 508
-
-**GetMinValue** - ScrollBar 542
-
-**GetMinValue** - Spin 544
-
-**GetMinValue** - TrackBar 548
-
-**GetMultiLine** - TextBox 546
-
-**GetName** - Control 505
-
-**GetName** - GL_Object 560
-
-**GetNearestPointOnCircle** 620
-
-**GetNearestPointOnCurve** 620
-
-**GetNearestPointOnLine** 620
-
-**GetNearestPointOnTriangle** 620
-
-**GetNetmask** 451
-
-**GetNumAnimations** - GL_Sprite 573
-
-**GetNumColliders** - GL_Sprite 577
-
-**GetNumFrames** - GL_Sprite 571
-
-**GetNumItems** - ComboBox 528
-
-**GetNumItems** - ListBox 536
-
-**GetNumLayers** - GL_Mapper 586
-
-**GetNumNodes** - GL_Route 592
-
-**GetNumObjects** - GL_Object 563
-
-**GetNumPhysicsShapes** - GL_Sprite 582
-
-**GetNumPrograms** - Engine 462
-
-**GetNumTilesets** - GL_Mapper 587
-
-**GetObject** - GL_Object 563
-
-**GetObjectNameList** - GL_Object 562
-
-**GetObjectOrder** - GL_Object 561
-
-**GetObjects** - GL_Object 563
-
-**GetOffsetX** - GL_Mapper 588
-
-**GetOffsetY** - GL_Mapper 588
-
-**GetOffX** - GL_Program 557
-
-**GetOffY** - GL_Program 557
-
-**GetOwner** - Control 513
-
-**GetPal** - DOS_Console 492
-
-**GetPanning** - GL_Music/Sound 591
-
-**GetParent** - Control 513
-
-**GetParent** - GL_Object 561
-
-**GetParent** - GL_Sprite 580
-
-**GetPath** - Engine 456
-
-**GetPerpendicularVector** 621
-
-**GetPhysics** - GL_Sprite 581
-
-**GetPhysicsAngularDamping** - GL_Sprite 583
-
-**GetPhysicsBody** - GL_Sprite 581
-
-**GetPhysicsDensity** - GL_Sprite 582
-
-**GetPhysicsFixedRotation** - GL_Sprite 582
-
-**GetPhysicsFriction** - GL_Sprite 583
-
-**GetPhysicsGravityScale** - GL_Sprite 583
-
-**GetPhysicsGravityX** - GL_Stage 569
-
-**GetPhysicsGravityY** - GL_Stage 569
-
-**GetPhysicsLinearDamping** - GL_Sprite 583
-
-**GetPhysicsMass** - GL_Sprite 582
-
-**GetPhysicsRestitution** - GL_Sprite 582
-
-**GetPhysicsScale** - GL_Stage 569
-
-**GetPhysicsVelocity** - GL_Sprite 584
-
-**GetPivotX** - GL_Sprite 574
-
-**GetPivotY** - GL_Sprite 574
-
-**GetPlaneFromTriangle** 621
-
-**GetPosition** - Control 507
-
-**GetPressedTextOffset** - Button 524
-
-**GetPrimaryDNS** 451
-
-**GetPriority** - GL_Object 561
-
-**GetPriority** - GL_Sprite 580
-
-**GetProgram** - Engine 462
-
-**GetProgram** - Window 498
-
-**GetProgramList** - Engine 462
-
-**GetProgramWithPID** - Engine 462
-
-**GetRadians** - Image 531
-
-**GetRayVector** 621
-
-**GetReadOnly** - RichTextEditor 538
-
-**GetRegistry** - Engine 455
-
-**GetRemote** - GeekReader 473
-
-**GetResX** - GL_Program 557
-
-**GetResY** - GL_Program 557
-
-**GetRF** - GL_Sprite 575
-
-**GetRight**- Control 506
-
-**GetROMBIOSFolder** 450
-
-**GetRowHeight** - ListBox 532
-
-**GetScale** - Control 511
-
-**GetScale** - GL_Sprite 577
-
-**GetScalePivot** - Control 512
-
-**GetScalePivotX** - Control 512
-
-**GetScalePivotY** - Control 512
-
-**GetScalePosition** - Control 512
-
-**GetScaleX** - GL_Sprite 577
-
-**GetScaleY** - GL_Sprite 577
-
-**GetScissorEnabled** - GL_Stage 568
-
-**GetScissorH** - GL_Stage 568
-
-**GetScissorW** - GL_Stage 568
-
-**GetScissorX** - GL_Stage 568
-
-**GetScissorY** - GL_Stage 568
-
-**GetScript** - GL_Object 564
-
-**GetScriptInterface** - GL_Object 564
-
-**GetScrollChild** - ScrollFrame 522
-
-**GetSecondaryDNS** 451
-
-**GetSelectedIndex** - ComboBox 527
-
-**GetSelectedIndex** - ListBox 534
-
-**GetSelectedIndexRange** - ListBox 534
-
-**GetSelectedText** - ComboBox 528
-
-**GetSelectedText** - ListBox 536
-
-**GetSelectedUserData** - ComboBox 528
-
-**GetSelectedUserData** - ListBox 536
-
-**GetSelectionColor** - ListBox 536
-
-**GetSerialNumber** - Engine 489
-
-**GetSHA1** 453
-
-**GetSize** - Control 507
-
-**GetSlotAudioVolume** - GeekReader 472
-
-**GetSpeedX** - GL_Controller 599
-
-**GetSpeedY** - GL_Controller 599
-
-**GetStatus** 452
-
-**GetStop** - GL_Object 560
-
-**GetString** 453
-
-**GetStyle** - Window 497
-
-**GetTarget** - GL_Controller 599
-
-**GetTempFolder** 450
-
-**GetTexCoord** - Image 531
-
-**GetText** - Button 523
-
-**GetText** - GL_Text 594
-
-**GetText** - ListBox 534
-
-**GetText** - RichTextEditor 539
-
-**GetTextColor** - ListBox 535
-
-**GetTextColor** - TextBox 546
-
-**GetTextColorMode** - DOS_Console 492
-
-**GetTextHeight** - GL_Text 594
-
-**GetTextModeCols** - DOS_Console 491
-
-**GetTextModeRows** - DOS_Console 491
-
-**GetTexture** - Image 530
-
-**GetTextureColor** - Image 530
-
-**GetTextureMask** - GL_Sprite 580
-
-**GetTextWidth** - GL_Text 594
-
-**GetThemePreset** - Engine 487
-
-**GetTileH** - GL_Mapper 587
-
-**GetTileset** - GL_Mapper 587
-
-**GetTileW** - GL_Mapper 587
-
-**GetTime** 675
-
-**GetTimeInfo** 675
-
-**GetTimeString** - Engine 489
-
-**GetTitle** - Window 497
-
-**GetTop** - Control 506
-
-**GetTopWindow** - Window 498
-
-**GetType** - GL_Sprite 573
-
-**GetUSBDevices** - GeekReader 471
-
-**GetUserData** - Control 512
-
-**GetUserData** - GL_Object 560
-
-**GetUserData** - ListBox 535
-
-**GetUserFolder** 450
-
-**GetUserName** - Engine 489
-
-**GetUVH** - GL_Sprite 576
-
-**GetUVW** - GL_Sprite 576
-
-**GetUVX** - GL_Sprite 576
-
-**GetUVY** - GL_Sprite 576
-
-**GetValue** - ProgressBar 537
-
-**GetValue** - ScrollBar 542
-
-**GetValue** - TextBox 545
-
-**GetValuePctg** - ScrollBar 542
-
-**GetVCenter** - Control 507
-
-**GetVerboseLevel** - Engine 481
-
-**GetVerticalScroll** - RichTextEditor 541
-
-**GetVerticalScroll** - ScrollFrame 522
-
-**GetVerticalScrollPctg** - ScrollFrame 522
-
-**GetVerticalScrollRange** - ScrollFrame 522
-
-**GetVFlip** - GL_Sprite 577
-
-**GetVideoAdjust** - Engine 485
-
-**GetVideoFormat** - Engine 485
-
-**GetVideoFramerate** - Engine 485
-
-**GetVideoFX** - Engine 483
-
-**GetVideoFXParams** - Engine 483
-
-**GetVideoOutput** - Engine 484
-
-**GetVideoOutputEx** - Engine 484
-
-**GetVideoOverscan** - Engine 484
-
-**GetView** - Frame 514
-
-**GetViewFolder** 450
-
-**GetViewport** - GL_Stage 566
-
-**GetViewportH** - GL_Stage 566
-
-**GetViewportW** - GL_Stage 566
-
-**GetViewportX** - GL_Stage 566
-
-**GetViewportY** - GL_Stage 566
-
-**GetViewPresetsFolder** 450
-
-**GetViewRscFolder** 450
-
-**GetViewScale** - GL_Stage 567
-
-**GetViewThemesFolder** 450
-
-**GetVirtualMachineConfigurationsFolder** 450
-
-**GetVirtualMachineKbdLayoutsFolder** 450
-
-**GetVirtualMachinesFolder** 450
-
-**GetVisible** - Control 506
-
-**GetVisible** - GL_Object 560
-
-**GetVisibleInternal** - Control 506
-
-**GetVolume** - GL_Music/Sound 590
-
-**GetWF** - GL_Sprite 575
-
-**GetWidth** - Control 506
-
-**GetWidth** - GL_Mapper 587
-
-**GetWidth** - GL_Sprite 575
-
-**GetWordWrap** - TextBox 546
-
-**GetX** - GL_Controller 600
-
-**GetX** - GL_Sprite 575
-
-**GetXF** - GL_Sprite 575
-
-**GetXML** 453
-
-**GetXRef** - GL_Object 562
-
-**GetY** - GL_Controller 600
-
-**GetY** - GL_Sprite 575
-
-**GetYF** - GL_Sprite 575
-
-GOSUB-RETURN 156
-
-GOTO 158
-
-GR [GeekReader] 357
-
-H
-
-**HasHorizontalFlip** - Image 531
-
-**HasPin** - Control 510
-
-**HasStyle** - Window 497
-
-**HasUndo** - RichTextEditor 540
-
-**HasVerticalFlip** - Image 531
-
-HELP 360
-
-**hex** 637
-
-HEX 159
-
-HEX\$ 159
-
-**hex2int** 637
-
-**Hide** - Control 505
-
-**Hide** - Window 495
-
-**HideLineNumber** - RichTextEditor 538
-
-**HSLToRGB** 639
-
-I
-
-IF ……………………………………………………………………… 160
-
-IF- THEN-ELSE 160
-
-**IncAlpha** - GL_Sprite 579
-
-**IncBounds** - Control 508
-
-**IncCameraPos** - GL_Stage 568
-
-**IncHeight** - Control 508
-
-**IncLeft** - Control 507
-
-**IncPos** - GL_Route 593
-
-**IncPos** - GL_Sprite 574
-
-**IncPosition** - Control 507
-
-**IncreaseAngle** 621
-
-**IncreaseAngleWithInertia** 621
-
-**IncreaseValue** 621
-
-**IncreaseValueWithInertia** 621
-
-**IncScale** - GL_Sprite 574
-
-**IncSize** - Control 507
-
-**IncTop** - Control 507
-
-**IncWidth** - Control 507
-
-**IndexOf** 674
-
-**IndexValid** 674
-
-INKEY\$ 162
-
-INP …………………………………………………………………… 163
-
-**Inp** - GeekReader 467
-
-INPUT 164, 167
-
-**Input** - DOS_Console 490
-
-INPUT\# 167
-
-INPUT\$ 166
-
-**InputDialogModal** - Engine 552
-
-**InsertItem** - ListBox 535
-
-**InsertNode** - GL_Route 592
-
-**InsertText** - RichTextEditor 539
-
-**InstancedObject** - GL_Object 562
-
-INSTR 168
-
-**int** 615
-
-INT ………………………………………………………………….. 169
-
-**IntersectBoxWithBox** 621
-
-**IntersectLine2DWithCircle** 622
-
-**IntersectLine2DWithLine2D** 622
-
-**IntersectLineWithLine** 622
-
-**IntersectORectWithORect** 622
-
-**IntersectPointWithBox** 622
-
-**IntersectRayWithPlane** 622
-
-**IntersectRayWithSphere** 622
-
-**IntersectRectWithRect** 623
-
-**IntersectSphereWithSphere** 623
-
-INTERVAL ON/ INTERVAL OFF/ INTERVAL STOP 170
-
-INTERVAL ON 174
-
-**InViewport** - GL_Sprite 581
-
-**isalpha** 637
-
-**IsButton** - GL_Pad 601
-
-**IsCartridgePlugged** - GeekReader 466
-
-**IsClipped** - GL_Sprite 580
-
-**IsConnected** 452
-
-**IsCursorOver** - Window 495
-
-**isdigit** 637
-
-**IsDownloading** 453
-
-**IsDragging** - Control 506
-
-**IsForeground** - Window 497
-
-**IsHidden** - Control 506
-
-**IsLineNumber** - RichTextEditor 539
-
-**IsMaximized** - Window 497
-
-**IsModified** - RichTextEditor 538
-
-**isnan** 618
-
-**IsOn** 451, 452
-
-**IsPlaying** - GL_Music/Sound 591
-
-**IsProcessing** 453
-
-**IsRunning** - GL_Object 563
-
-**IsSelectedIndex** - ListBox 534
-
-**IsSlotEnabled** - GeekReader 466
-
-**IsSpecialChars** - RichTextEditor 540
-
-**IsXRef** - GL_Object 562
-
-J
-
-**JSON_Close** 645
-
-**JSON_CountObjectItems** 645
-
-**JSON_FindObjectItem** 645
-
-**JSON_GetObjectItem** 645
-
-**JSON_GetObjectKey** 646
-
-**JSON_GetRootObject** 645
-
-**JSON_InsertObjectItem** 646
-
-**JSON_IsObjectItem** 646
-
-**JSON_NewObject** 646
-
-**JSON_Open** 645
-
-**JSON_ToString** 646
-
-K
-
-KEY …………………………………………………… 171, 172, 174
-
-KEY (n) ON/KEY (n) OFF/ KEY (n) STOP 174
-
-KEY OFF 174
-
-KEY ON 173
-
-KEY ON/ KEY OFF 173
-
-KILL 175, 361
-
-**KillProgram** - Engine 462
-
-**KillProgramWithPID** - Engine 462
-
-L
-
-LEFT\$ 176
-
-LEN ………………………………………………………………….. 177
-
-LET …………………………………………………………………… 178
-
-LINE 179
-
-LINE INPUT 181, 182
-
-LINE INPUT \# 182
-
-**LinkCamera** - GL_Stage 569
-
-LIST 183
-
-**List_ApplyFunction** 673
-
-Ll
-
-LLIST 184
-
-L
-
-LOAD 185
-
-**Load** - GL_Music/Sound 590
-
-**LoadImage** - Engine 479
-
-**LoadParams** 451, 452
-
-**LoadState** - GL_Object 564
-
-**LoadTexture** - Engine 479
-
-**LoadTexture** - GL_Stage 566
-
-**LoadVGS** - GL_Program 559
-
-**LoadVirtualMachineConfiguration** - Engine 475
-
-LOC 186
-
-LOCATE 187
-
-**Locate** - DOS_Console 491
-
-LOF ………………………………………………………………….. 188
-
-**log** 618
-
-LOG 189
-
-**log10** 618
-
-**LogError** - Engine 481
-
-**LogPrint** - Engine 481
-
-**LogVerbose** - Engine 481
-
-**LogWarning** - Engine 481
-
-**long** 615
-
-LPOS 190
-
-LPRINT 191
-
-LPRINT USING 192
-
-LSET 193
-
-M
-
-MAXFILES 194
-
-**Maximize** - Window 498
-
-MD / MKDIR 362
-
-MERGE 195
-
-MID\$ 196, 198
-
-MID\$ = Y\$ 198
-
-MKI\$/MKS\$/MKD\$ 199
-
-MODE 363
-
-MOTOR 201
-
-MOUNT 366
-
-MOVE 364
-
-**MoveTo** - GL_Sprite 585
-
-MSXVR 17
-
-MVDIR 365
-
-N
-
-NAME 202
-
-**namespace** 419
-
-**NetSocket_Connect** 652
-
-**NetSocket_Delete** 652
-
-**NetSocket_GetErrorMessage** 653
-
-**NetSocket_GetIPs** 653
-
-**NetSocket_Listen** 652
-
-**NetSocket_New** 652
-
-**NetSocket_Recv** 652
-
-**NetSocket_Send** 652
-
-**NetSocket_SetNoDelay** 652
-
-**NetSocket_SetNonBlocking** 653
-
-**NetSocket_SetRecvID** 653
-
-**NetSocket_SetRecvMode** 653
-
-**NetSocket_SyncRecv** 653
-
-**NetSocket_SyncSend** 653
-
-NEW 203
-
-**NewCollider** - GL_Program 558
-
-**NewController** - GL_Program 558
-
-**NewMapper** - GL_Program 558
-
-**NewMusic** - GL_Program 558
-
-**NewObjec t**- GL_Object 562
-
-**NewObject** - GL_Program 558
-
-**NewPad** - GL_Program 559
-
-**NewRoute** - GL_Program 558
-
-**NewSound** - GL_Program 558
-
-**NewSprite** - GL_Program 558
-
-**NewStage** - GL_Program 558
-
-**NewText** - GL_Program 558
-
-**NewTimer** - GL_Program 558
-
-**NewXRefObject** - GL_Object 562
-
-NEXT 149
-
-O
-
-**oct** …………………………………………………………………… 637
-
-OCT\$ 204
-
-**oct2int** 637
-
-**Off** …………………………………………………………… 451, 452
-
-**On** ……………………………………………………………. 451, 452
-
-ON ERROR GOTO 205
-
-ON GOSUB 206
-
-ON -GOSUB 206
-
-ON GOTO 207
-
-ON INTERVAL 208
-
-ON INTERVAL GOSUB 208
-
-ON KEY GOSUB 209
-
-ON SPRITE GOSUB 210
-
-ON STOP GOSUB 211
-
-ON STRIG GOSUB 212
-
-ON-GOTO 207
-
-OPEN 213
-
-OpenFileDialog 549
-
-OpenFolderDialog 549
-
-**OpenI2C** - GeekReader 471
-
-**OpenUSBDevice** - GeekReader 471
-
-**OrderToBack** - GL_Object 563
-
-**OrderToFront** - GL_Object 563
-
-OUT 215
-
-**Outp** - GeekReader 467
-
-P
-
-PAD 216, 217
-
-PAINT 218
-
-**Paste** - RichTextEditor 540
-
-PATH 367
-
-**Path_Split** 673
-
-PAUSE 371
-
-**Pause** - GL_Object 564
-
-**PauseObjects** - GL_Object 564
-
-PDL ………………………………………………………………….. 220
-
-PEEK 221
-
-**Peek** - GeekReader 466
-
-**PinToBounds** - Control 510
-
-PKG 369, 376
-
-PLAY 222, 226, 372
-
-**Play** - GL_Music/Sound 590
-
-**Play** - GL_Program 557
-
-POINT 227
-
-**PointAdd** 623
-
-**PointCross** 623
-
-**PointDistance** 623
-
-**PointDistance2D** 623
-
-**PointDiv** 623
-
-**PointDot** 623
-
-**PointInORect** 624
-
-**PointInRect** 624
-
-**PointInTriangle** 624
-
-**PointInTriangle2D** 624
-
-**PointLength** 624
-
-**PointMul** 624
-
-**PointNormalize** 624
-
-**PointRotate2D** 624
-
-**PointScale** 624
-
-**PointSub** 624
-
-**PointToClient** - Control 509
-
-**PointToScreen** - Control 509
-
-POKE 228
-
-**Poke** - GeekReader 466
-
-POS 229
-
-**pow** 618
-
-**PowerOff** - Engine 488
-
-PRESET 230
-
-PRINT 231
-
-**Print** - DOS_Console 490
-
-PRINT \# 236, 237
-
-PRINT \#USING 237
-
-PRINT USING 233, 235
-
-**PrintError** - DOS_Console 490
-
-**PrintLn** - DOS_Console 490
-
-**PrintOk** - DOS_Console 490
-
-**ProjectPointOnToPlane** 625
-
-PSET 238
-
-PUT 239
-
-PUT SPRITE 240
-
-Q
-
-**QRotationDiff** 625
-
-**QRotationToAngleAxis** 625
-
-**QRotationToYawPitchRoll** 625
-
-**QSort** 674
-
-R
-
-**radtodeg** 617
-
-RAMDISK 377
-
-**rand** 618
-
-**range** 618
-
-READ 242
-
-**ReadEEPROM** - GeekReader 472
-
-**ReadIOExt** - GeekReader 470
-
-**ReadMemory** - GeekReader 467
-
-**ReadPort** - GeekReader 468
-
-**Redo** - RichTextEditor 540
-
-**Regex_Delete** 654
-
-**Regex_Match** 655
-
-**Regex_New** 654
-
-**Regex_Replace** 656
-
-**Regex_Search** 656
-
-REM 243, 378
-
-**RemoveAnimation** - GL_Sprite 571
-
-**RemoveAnimations** - GL_Sprite 571
-
-**RemoveChild** - GL_Sprite 580
-
-**RemoveColliderByIndex** - GL_Sprite 577
-
-**RemoveColliders** - GL_Sprite 577
-
-**RemoveDriver** - GeekReader 473
-
-**RemoveFlags** - GL_Sprite 579
-
-**RemoveFrames** - GL_Sprite 571
-
-**RemoveHotKey** - Window 498
-
-**RemoveHotKeysWithContext** - Window 499
-
-**RemoveInstancedObject** - GL_Object 563
-
-**RemoveItem** - ComboBox 527
-
-**RemoveLayer** - GL_Mapper 586
-
-**RemoveNode** - GL_Route 592
-
-**RemoveObject** - GL_Object 561
-
-**RemovePhysicsShapeByIndex** - GL_Sprite 582
-
-**RemovePin** - Control 510
-
-**RemoveSelectedItem** - ComboBox 528
-
-**RemoveStyle** - Window 497
-
-**RemoveTileSet** - GL_Mapper 587
-
-REN / RENAME 379
-
-**RenameVirtualMachineConfiguration** - Engine 475
-
-RENUM 244
-
-RESET 380
-
-**Reset** - Engine 488
-
-**ResetAnimation** - GL_Sprite 573
-
-RESTORE 245
-
-**Restore** - Window 498
-
-**RestoreBgColor** - TextBox 545
-
-RESUME 246
-
-**Resume** - GL_Object 564
-
-**ResumeObjects** - GL_Object 564
-
-**Revert** 673
-
-**RGB** 639
-
-**RGBToHSL** 639
-
-RIGHT\$ 247
-
-RMDIR / RD 381
-
-RND 248
-
-RNDIR 382
-
-**RotatePointWithQRotation** 625
-
-**RotateVectorAxis** 625
-
-**RotateVectorX** 625
-
-**RotateVectorY** 625
-
-**RotateVectorZ** 625
-
-**round** 618
-
-RSET 249
-
-RUN 250
-
-**RunBasic** - Engine 463
-
-**RunFileExplorer** - Engine 463
-
-**RunImageViewer** - Engine 463
-
-**RunProgram** - Engine 464
-
-**RunProgramWithParams** - Engine 464
-
-**RunSystem** - Engine 463
-
-**RunTextEditor** - Engine 463
-
-**RunTextViewer** - Engine 463
-
-S
-
-SAVE 251
-
-SaveFileDialog 549
-
-SaveFolderDialog 549
-
-**SaveParams** 451, 452
-
-**SaveState** - GL_Object 564
-
-**SaveVirtualMachineConfiguration** - Engine 475
-
-**Scan** 452
-
-SCREEN 252, 253
-
-**ScreenToClient** - Window 496
-
-**ScrollAtEnd** - ListBox 534
-
-**SelectIndex** - ComboBox 527
-
-**SelectIndex** - ListBox 533
-
-**SelectItemByText** - ComboBox 527
-
-**SelectItemByUserData** - ComboBox 527
-
-**SelectNext** - ListBox 534
-
-**SelectPrevious** - ListBox 534
-
-**SelectRange** - ListBox 534
-
-**SelectWord** - RichTextEditor 540
-
-**Serial_Close** 672
-
-**Serial_Flush** 672
-
-**Serial_IsAvailable** 672
-
-**Serial_Open** 672
-
-**Serial_Print** 672
-
-**Serial_Recv** 672
-
-**Serial_RecvUntil** 672
-
-**Serial_Send** 672
-
-SET 383
-
-SET ADJUST 256
-
-SET BEEP 257
-
-SET DATE 258
-
-SET PAGE 259
-
-SET PASSWORD 260
-
-SET PROMPT 261
-
-SET SCREEN 262
-
-SET SCROLL 263
-
-SET TIME 264
-
-SET TITLE 265
-
-SET VIDEO 266, 267
-
-**SetActive** - GL_Stage 566
-
-**SetAlias** - Engine 489
-
-**SetAlign** - GL_Text 594
-
-**SetAlpha** - Control 511
-
-**SetAlpha** - GL_Sprite 579
-
-**SetAngle** - GL_Sprite 580
-
-**SetAnimation** - GL_Sprite 572
-
-**SetAnimation** - Image 530
-
-**SetAnimationForFrames** - Image 530
-
-**SetAnimationSpeed** - Image 530
-
-**SetAnimationSpeedFactor** - GL_Sprite 573
-
-**SetAudioOutput** - Engine 486
-
-**SetAudioPanning** - Engine 486
-
-**SetAudioVolume** - Engine 486
-
-**SetAutoReleaseTextures** - Image 529
-
-**SetAutoScrollOnListChange** - ListBox 532
-
-**SetAutoSize** - ToolBar 547
-
-**SetBackColor** - GL_Program 557
-
-**SetBgColor** - Frame 515
-
-**SetBgColor** - GL_Program 557
-
-**SetBgColor** - ListBox 532
-
-**SetBgColor** - TextBox 545
-
-**SetBgColor** - Window 495
-
-**SetBgImage** - GL_Program 557
-
-**SetBounds** - Control 509
-
-**SetBounds** - Window 497
-
-**SetBroadcast** 451
-
-**SetBundleRegistry** - Engine 455
-
-**SetButton** - GL_Pad 601
-
-**SetCameraClipH** - GL_Stage 567
-
-**SetCameraClipW** - GL_Stage 567
-
-**SetCameraClipX** - GL_Stage 567
-
-**SetCameraClipY** - GL_Stage 567
-
-**SetCameraPos** - GL_Stage 568
-
-**SetCameraX** - GL_Stage 567
-
-**SetCameraY** - GL_Stage 567
-
-**SetCameraZoom** - GL_Stage 568
-
-**SetCartridgeSlot** - GeekReader 467
-
-**SetChecked** - CheckBox 525
-
-**SetCheckedColor** - Button 524
-
-**SetCheckerObj** - GL_Collider 597
-
-**SetCheckerRect** - GL_Collider 597
-
-**SetCheckType** - GL_Collider 597
-
-**SetChroma** - GL_Sprite 585
-
-**SetChromaColor** - GL_Sprite 585
-
-**SetClampedToScreen** - Control 506
-
-**SetClipping** - GL_Sprite 581
-
-**SetCollision** - GL_Sprite 577
-
-**SetColor** - ColorPicker 526
-
-**SetColor** - DOS_Console 492
-
-**SetColor** - GL_Text 594
-
-**SetColor**- GL_Sprite 579
-
-**SetColorAdd** - GL_Sprite 579
-
-**SetColoredButton** - Button 524
-
-**SetConfigProperty** - Engine 454
-
-**SetCurAnimation** - GL_Sprite 573
-
-**SetCursorLine** - RichTextEditor 539
-
-**SetCursorPos** - RichTextEditor 539
-
-**SetCustom** - GL_Controller 600
-
-**SetDefaultFont** - Button 524
-
-**SetDefaultTextColor** - ListBox 536
-
-**SetDegrees** - Image 530
-
-**SetDHCP** 451
-
-**SetDirectionLayout** - ProgressBar 537
-
-**SetDirectionLayout** - ScrollBar 542
-
-**SetDisabledColor** - Button 524
-
-**SetDriverProperty** - GeekReader 473
-
-**SetEditable** - RichTextEditor 538
-
-**SetEmptyText** - TextBox 546
-
-**SetEmptyTextColor** - TextBox 546
-
-**SetFixTopItemOnInsert** - ListBox 532
-
-**SetFlags** - GL_Sprite 578
-
-**SetFloatMode** - TextBox 545
-
-**SetFont** - Button 523
-
-**SetFont** - GL_Text 594
-
-**SetFont** - ListBox 532
-
-**SetFontBitmapProperties**- GL_Text 595
-
-**SetFontHeight** - TextBox 545
-
-**SetFontName** - GL_Text 594
-
-**SetFontSize** - Button 523
-
-**SetFontSize** - GL_Text 594
-
-**SetFontSpacing** - GL_Text 595
-
-**SetFrame** - GL_Sprite 578
-
-**SetFrame** - Image 530
-
-**SetFrameTexture** - Image 530
-
-**SetFrequency** - GL_Timer 596
-
-**SetGateway** 451
-
-**SetGlobal** - GL_Stage 569
-
-**SetHeight** - Control 508
-
-**SetHeight** - GL_Mapper 588
-
-**SetHeight** - GL_Sprite 576
-
-**SetHFlip** - GL_Sprite 576
-
-**SetHiddenSSID** 452
-
-**SetHideScrollbarIfDisabled** - ListBox 532
-
-**SetHighlightColor** - Button 524
-
-**SetHorizontalScroll** - ScrollFrame 522
-
-**SetHorizontalScrollPctg** - ScrollFrame 522
-
-**SetIcon** - Button 523
-
-**SetIcon** - ListBox 535
-
-**SetIconColor** - Button 524
-
-**SetIFLTexture** - Image 529
-
-**SetIntegerMode** - TextBox 545
-
-**SetInvertChunkDirection** - ProgressBar 537
-
-**SetIOExtDir** - GeekReader 470
-
-**SetIOExtPu** - GeekReader 470
-
-**SetIP** 451
-
-**SetItemText** - ComboBox 527
-
-**SetItemUserData** - ComboBox 527
-
-**SetKeyboardLayout** - Engine 480
-
-**SetLed** - GeekReader 469
-
-**SetLeft** - Control 507
-
-**SetLeftAlign** - ToolBar 547
-
-**SetLocaleLanguage** - Engine 480
-
-**SetLoop** - GL_Music/Sound 590
-
-**SetMask** - Control 512
-
-**SetMatchPattern** - ListBox 534
-
-**SetMaxCollisions** - GL_Collider 598
-
-**SetMaximumSize** - Control 508
-
-**SetMaxValue** - ProgressBar 537
-
-**SetMaxValue** - ScrollBar 542
-
-**SetMaxValue** - Spin 544
-
-**SetMaxValue** - TrackBar 548
-
-**SetMinimumSize** - Control 508
-
-**SetMinValue** - ProgressBar 537
-
-**SetMinValue** - ScrollBar 542
-
-**SetMinValue** - Spin 544
-
-**SetMinValue** - TrackBar 548
-
-**SetModal** - Window 499
-
-**SetModified** - RichTextEditor 538
-
-**SetMouseCursor** - Frame 514
-
-**SetMultiLine** - TextBox 546
-
-**SetMultiSelect** - ListBox 533
-
-**SetName** - Control 505
-
-**SetName** - GL_Object 560
-
-**SetNetmask** 451
-
-**SetNormalColor** - Button 524
-
-**SetOffset** - GL_Mapper 588
-
-**SetOffsetX**- GL_Mapper 588
-
-**SetOffsetY** - GL_Mapper 588
-
-**SetOnButtonClick** - ComboBox 528
-
-**SetOnChange** - CheckBox 525
-
-**SetOnChange** - ComboBox 528
-
-**SetOnChange** - ScrollBar 543
-
-**SetOnChange** - TrackBar 548
-
-**SetOnChangeSelection** - ListBox 535
-
-**SetOnChar** - RichTextEditor 539
-
-**SetOnChar** - TextBox 545
-
-**SetOnClick** - Button 523
-
-**SetOnCollision** - GL_Collider 598
-
-**SetOnColorChanged** - ColorPicker 526
-
-**SetOnCursorMoved** - RichTextEditor 540
-
-**SetOnEndRoute** - GL_Controller 600
-
-**SetOnEnterLink** - RichTextEditor 541
-
-**SetOnItemDoubleClick** - ListBox 536
-
-**SetOnLeaveLink** - RichTextEditor 541
-
-**SetOnMove** - TrackBar 548
-
-**SetOnPress** - Button 523
-
-**SetOnStop** - GL_Music/Sound 591
-
-**SetOnTextChanged** - RichTextEditor 539
-
-**SetOnTextChanged** - TextBox 545
-
-**SetOwner** - Control 513
-
-**SetOwnerDrawRow** - ListBox 532
-
-**SetPad** - GL_Controller 600
-
-**SetPal** - DOS_Console 492
-
-**SetPanning**- GL_Music/Sound 591
-
-**SetParent** - Control 513
-
-**SetParent** - GL_Object 561
-
-**SetPhysics** - GL_Sprite 581
-
-**SetPhysicsAngularDamping** - GL_Sprite 583
-
-**SetPhysicsBody** - GL_Sprite 581
-
-**SetPhysicsDensity** - GL_Sprite 582
-
-**SetPhysicsFixedRotation** - GL_Sprite 582
-
-**SetPhysicsFriction** - GL_Sprite 582
-
-**SetPhysicsGravityScale** - GL_Sprite 583
-
-**SetPhysicsGravityX** - GL_Stage 569
-
-**SetPhysicsGravityY**- GL_Stage 569
-
-**SetPhysicsLinearDamping** - GL_Sprite 583
-
-**SetPhysicsMass** - GL_Sprite 582
-
-**SetPhysicsRestitution** - GL_Sprite 582
-
-**SetPhysicsScale** - GL_Stage 569
-
-**SetPin** - Control 510
-
-**SetPivot** - GL_Sprite 573
-
-**SetPivotX** - GL_Sprite 573
-
-**SetPivotY** - GL_Sprite 574
-
-**SetPos** - GL_Sprite 574
-
-**SetPosition** - Control 508
-
-**SetPressedColor** - Button 524
-
-**SetPressedTextOffset** - Button 524
-
-**SetPrimaryDNS** 451
-
-**SetPriority** - GL_Object 560
-
-**SetPriority** - GL_Sprite 580
-
-**SetRadians** - Image 530
-
-**SetRange** - Spin 544
-
-**SetRange** - TrackBar 548
-
-**SetReadOnly** - RichTextEditor 538
-
-**SetReadOnly** - TextBox 546
-
-**SetRect** - GL_Sprite 574
-
-**SetRegistry** - Engine 455
-
-**SetRemote** - GeekReader 473
-
-**SetResolution** - GL_Program 559
-
-**SetRightAlign** - ToolBar 547
-
-**SetRoute** - GL_Controller 599
-
-**SetRowHeight** - ListBox 532
-
-**SetScale** - Control 511
-
-**SetScale** - GL_Sprite 577
-
-**SetScalePivot** - Control 512
-
-**SetScalePivot** - GL_Sprite 573
-
-**SetScalePivotX** - Control 512
-
-**SetScalePivotY** - Control 512
-
-**SetScaleX** - GL_Sprite 577
-
-**SetScaleY** - GL_Sprite 577
-
-**SetScissorEnabled** - GL_Stage 568
-
-**SetScissorH** - GL_Stage 568
-
-**SetScissorW** - GL_Stage 568
-
-**SetScissorX** - GL_Stage 568
-
-**SetScissorY** - GL_Stage 568
-
-**SetScript** - GL_Object 564
-
-**SetScriptInterface** - GL_Object 564
-
-**SetScrollChild** - ScrollFrame 522
-
-**SetSecondaryDNS** 451
-
-**SetSelectionColor** - ListBox 536
-
-**SetSize** - Control 508
-
-**SetSize** - GL_Sprite 574
-
-**SetSlotAudioVolume** - GeekReader 472
-
-**SetSpeed** - GL_Controller 599
-
-**SetSpeedX** - GL_Controller 599
-
-**SetSpeedY** - GL_Controller 599
-
-**SetStepValue** - ScrollBar 543
-
-**SetStepValue** - Spin 544
-
-**SetStop** - GL_Object 560
-
-**SetStringList** - ListBox 533
-
-**SetStyle** - Window 497
-
-**SetTarget** - GL_Controller 599
-
-**SetTexCoord** - Image 531
-
-**SetTexCoordAll** - Image 531
-
-**SetText** - ComboBox 527
-
-**SetText** - GL_Text 594
-
-**SetText** - ListBox 534
-
-**SetText** - RichTextEditor 539
-
-**SetTextAlign** - Button 523
-
-**SetTextAlign** - ListBox 533
-
-**SetTextAlign** - TextBox 546
-
-**SetTextColor** - Button 523
-
-**SetTextColor** - ListBox 534
-
-**SetTextColor** - TextBox 546
-
-**SetTextColorMode** - DOS_Console 491
-
-**SetTextMode** - TextBox 545
-
-**SetTextPadding** - Button 524
-
-**SetTexture** - Image 529
-
-**SetTextureColo r**- Image 530
-
-**SetTextureLoadWithCache** - Image 529
-
-**SetTextureMask** - GL_Sprite 580
-
-**SetTexturePtr** - Image 529
-
-**SetThemeColorIndices** - Engine 487
-
-**SetThemeConsoleWidth** - Engine 487
-
-**SetThemePreset** - Engine 487
-
-**SetThumbType** - TrackBar 548
-
-**SetTileH** - GL_Mapper 587
-
-**SetTileW** - GL_Mapper 587
-
-**SetTime** - Engine 489
-
-**SetTintColor** - Button 524
-
-**SetTitle** - Window 497
-
-**SetTop** - Control 507
-
-**SetTopAlign** - ToolBar 547
-
-**SetType** - GL_Sprite 573
-
-**SetUpdateCallback** - GL_Controller 600
-
-**SetUrlTexture** - Image 529
-
-**SetUser** - Engine 489
-
-**SetUserCallback** - GL_Timer 596
-
-**SetUserData** - Control 512
-
-**SetUserData** - GL_Object 560
-
-**SetUserData** - ListBox 535
-
-**SetUserDraw** - GL_Sprite 579
-
-**SetUserMove** - GL_Sprite 579
-
-**SetUV** - GL_Sprite 576
-
-**SetUVH** - GL_Sprite 576
-
-**SetUVW** - GL_Sprite 576
-
-**SetUVX** - GL_Sprite 576
-
-**SetUVY** - GL_Sprite 576
-
-**SetValue** - ProgressBar 537
-
-**SetValue** - ScrollBar 542
-
-**SetValue** - Spin 544
-
-**SetValue** - TextBox 545
-
-**SetValue** - TrackBar 548
-
-**SetValuePctg** - ScrollBar 542
-
-**SetVerboseLevel** - Engine 481
-
-**SetVerticalScroll** - RichTextEditor 541
-
-**SetVerticalScroll** - ScrollFrame 522
-
-**SetVerticalScrollPctg** - ScrollFrame 522
-
-**SetVFlip** - GL_Sprite 576
-
-**SetVideoAdjust** - Engine 485
-
-**SetVideoFormat** - Engine 485
-
-**SetVideoFramerate** - Engine 485
-
-**SetVideoFX** - Engine 483
-
-**SetVideoOutput** - Engine 484
-
-**SetVideoOverscan** - Engine 484
-
-**SetViewport** - GL_Stage 566
-
-**SetViewportH** - GL_Stage 566
-
-**SetViewportW** - GL_Stage 566
-
-**SetViewportX** - GL_Stage 566
-
-**SetViewportY** - GL_Stage 566
-
-**SetViewScale** - GL_Program 559
-
-**SetViewScale** - GL_Stage 567
-
-**SetVisible** - GL_Object 560
-
-**SetVolume** - GL_Music/Sound 590
-
-**SetWidth** - Control 508
-
-**SetWidth** - GL_Mapper 587
-
-**SetWidth** - GL_Sprite 575
-
-**SetWordWrap** - RichTextEditor 538
-
-**SetWordWrap** - TextBox 546
-
-**SetX** - GL_Sprite 574
-
-**SetY** - GL_Sprite 575
-
-SGN 268
-
-**short** 614
-
-**Show** - Control 505
-
-**Show** - Window 495
-
-**ShowLineNumber** - RichTextEditor 538
-
-**ShowSpecialChars** - RichTextEditor 540
-
-**sign** 619
-
-**sin** …………………………………………………………………… 619
-
-SIN …………………………………………………………………… 269
-
-sizeof 415
-
-**slerp** 619
-
-SOUND 270, 272
-
-SPACE 273
-
-SPACE\$ 273
-
-SPC ………………………………………………………………….. 274
-
-SPRITE OFF 275
-
-SPRITE ON 275
-
-SPRITE ON/SPRITE OFF/SPRITE STOP 275
-
-SPRITE\$ 276
-
-SQR 277
-
-**sqrt** 619
-
-**srand** 619
-
-**Start** - GL_Object 564
-
-**state** 444
-
-STICK 278
-
-STOP 279, 280, 384
-
-**Stop** - GL_Music/Sound 590
-
-**Stop** - GL_Object 564
-
-**Stop** - GL_Program 557
-
-STOP OFF 280
-
-STOP ON 280
-
-STOP ON/STOP OFF/STOP STOP 280
-
-**StopPowerOff** - Engine 488
-
-STR\$ 283
-
-STRIG 281
-
-STRIG OFF 282
-
-STRIG ON 282
-
-STRIG ON/STRIG OFF/STRIG STOP 282
-
-STRIG STOP 282
-
-**string** 616
-
-STRING\$ 284
-
-**String_Compare** 632
-
-**String_CompareIgnoreCase** 632
-
-**String_Copy** 632
-
-**String_Count** 632
-
-**String_Fill** 632
-
-**String_FindStr** 632
-
-**String_Format** 633
-
-**String_FromBase64** 633
-
-**String_FromHEX** 632
-
-**String_FromHTML** 633
-
-**String_FromUNICODE** 633
-
-**String_FromURL** 633
-
-**String_FromUTF8** 633
-
-**String_FuzzyMatch** 634
-
-**String_GetToken** 634
-
-**String_IsUnicode** 634
-
-**String_Left** 634
-
-**String_Load** 634
-
-**String_LowerCase** 634
-
-**String_LTrim** 634
-
-**String_New** 635
-
-**String_Replace** 635
-
-**String_Right** 635
-
-**String_RTrim** 635
-
-**String_SubStr** 635
-
-**String_ToArray** 635
-
-**String_ToBase64** 635
-
-**String_ToBuffer** 636
-
-**String_ToHEX** 636
-
-**String_ToHTML** 636
-
-**String_ToList** 636
-
-**String_ToUNICODE** 636
-
-**String_ToURL** 636
-
-**String_ToUTF8** 636
-
-**String_Trim** 636
-
-**String_UpperCase** 636
-
-**strlen** 636
-
-SWAP 285
-
-**SystemPause** - Engine 488
-
-**SysTime_Compare** 659
-
-**SysTime_Delete** 659
-
-**SysTime_Format** 659
-
-**SysTime_Get** 660
-
-**SysTime_New** 659
-
-**SysTime_Set** 660
-
-**SysTime_SetMilliseconds** 660
-
-**SysTime_ToMilliseconds** 660
-
-**SysTime_ToString** 661
-
-**SysTime_Update** 661
-
-T
-
-TAB 286
-
-**tan** …………………………………………………………………… 619
-
-TAN 287
-
-**TangentPlaneNormalOfEllipsoid** 626
-
-**Texture_Copy** 668
-
-**Texture_CreateFromBuffer** 668
-
-**Texture_Delete** 668
-
-**Texture_FillColor** 668
-
-**Texture_FSDither** 668
-
-**Texture_GetAniLoops** 668
-
-**Texture_GetColor** 669
-
-**Texture_GetFormat** 669
-
-**Texture_GetH** 669
-
-**Texture_GetHeight** 669
-
-**Texture_GetName** 669
-
-**Texture_GetPalette** 669
-
-**Texture_GetW** 669
-
-**Texture_GetWidth** 669
-
-**Texture_HSLColor** 670
-
-**Texture_Load** 667
-
-**Texture_LoadFromFile** 667
-
-**Texture_Lock** 670
-
-**Texture_ReplaceColor** 670
-
-**Texture_Save** 670
-
-**Texture_SetColor** 670
-
-**Texture_SetColorPattern** 670
-
-**Texture_Transform** 671
-
-**Texture_Unlock** 671
-
-TIME 288, 385
-
-**Timer_Delete** 657
-
-**Timer_Get** 657
-
-**Timer_GetFrequency** 657
-
-**Timer_GetUserData** 657
-
-**Timer_IsStopped** 657
-
-**Timer_New** 657
-
-**Timer_Reset** 657
-
-**Timer_SetCallback** 657
-
-**Timer_SetFrequency** 657
-
-**Timer_SetUserData** 658
-
-**Timer_Start** 658
-
-**Timer_Stop** 658
-
-**Trace** - GL_Program 559
-
-TROFF 289
-
-TRON 290
-
-TYPE 386
-
-typeof 415
-
-U
-
-**ubyte** 614
-
-**uint** 615
-
-**ulong** 615
-
-UNDEL 387
-
-**Undo** - GL_Controller 600
-
-**Undo** - RichTextEditor 540
-
-**unicode** 637
-
-**UnionRectWithRect** 623
-
-**UnloadVirtualMachineConfiguration** - Engine 474
-
-**ushort** 615
-
-USR 291, 292
-
-V
-
-VAL 293
-
-VARPTR 294, 295
-
-VARPTR (1) 294
-
-VARPTR (2) 295
-
-**VCCOff** - GeekReader 466
-
-**VCCOn** - GeekReader 466
-
-VDP 296
-
-VER 388
-
-VERIFY 389
-
-VOL 390
-
-VPEEK 297
-
-VPOKE 298
-
-W
-
-WAIT 299
-
-WIDTH 300
-
-**Width** - DOS_Console 491
-
-**WriteEEPROM** - GeekReader 472
-
-**WriteIOExt** - GeekReader 470
-
-**WriteMemory** - GeekReader 467
-
-**WritePort** - GeekReader 468
-
-X
-
-XDIR 391
-
-**XML_Close** 643
-
-**XML_FirstAttribute** 643
-
-**XML_FirstElement** 643
-
-**XML_GetAttributeName** 643
-
-**XML_GetAttributeValue** 644
-
-**XML_GetElementValue** 643
-
-**XML_GetKey** 644
-
-**XML_GetRootElement** 643
-
-**XML_NextAttribute** 644
-
-**XML_NextElement** 643
-
-**XML_Open** 643
-
-Y
-
-**YawPitchRollToMatrix** 626
-
-**YawPitchRollToQRotation** 626
-
-Z
-
-**ZIP_Close** 662
-
-**ZIP_FindCloseFile** 662
-
-**ZIP_FindFirstFile** 662
-
-**ZIP_FindNextFile** 662
-
-**ZIP_GetFile** 662
-
-**ZIP_Open** 662
-
-ZIPTOOL 392
